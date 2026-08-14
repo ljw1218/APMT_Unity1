@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
         rigid = GetComponent < Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        target = player.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
