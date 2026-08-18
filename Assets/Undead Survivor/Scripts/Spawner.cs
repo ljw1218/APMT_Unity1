@@ -11,9 +11,9 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f),spawnData.Length-1);
 
-        if(timer > (level == 0 ? 0.5f : 1f))
+        if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
             Spawn();
@@ -22,8 +22,10 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        Transform enemy = GameManager.instance.pool.GetGM(level).transform;
-
+        
+        GameObject enemy = GameManager.instance.pool.GetGM(0);
+        enemy.GetComponent<Enemy>().Init(spawnData[level]);
+        
     }
 }
 
@@ -35,10 +37,5 @@ public class SpawnData
     public int health;
     public float speed;
 
-    public SpawnData(){
-        spriteType = 0;
-        spawnTime = 0;
-        health = 0;
-        speed = 0f;
-    }
+    
 }

@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 2;
+    public float speed;
+    public float maxHealth;
+    public float health;
+    public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     Vector2 dirVec;
 
@@ -30,9 +33,42 @@ public class Enemy : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (dirVec.x != 0)
+        if (!bIsLive)
+            return;
+
+        spriter.flipX = target.position.x < rigid.position.x;
+    }
+    
+    void OnEnable()
+    {
+        target = GameManager.instance.player.GetComponent<Rigidbody2D>();
+        bIsLive = true;
+        health = maxHealth;
+    }
+
+    public void Init(SpawnData data)
+    {
+        anim.runtimeAnimatorController = animCon[data.spriteType];
+        speed = data.speed;
+        maxHealth = data.health;
+        health = data.health;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet"))
+            return;
+
+        health -= collision.GetComponent<Bullet>().damage; 
+
+        if(health < 0)
         {
-            spriter.flipX = dirVec.x < 0;
+            Dead();
         }
+    }
+
+    void Dead()
+    {
+        gameObject.SetActive(false);
     }
 }
