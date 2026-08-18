@@ -4806,7 +4806,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.25
+  orthographic size: 6.8055553
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18339,7 +18339,7 @@ MonoBehaviour:
   id: 0
   prefabId: 1
   damage: 4
-  count: 1
+  count: 3
   speed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
