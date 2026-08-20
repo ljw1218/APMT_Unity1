@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,7 +10,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
     Vector2 dirVec;
 
-    bool bIsLive;
+    public bool bIsLive;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -26,6 +27,9 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!bIsLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+            return;
+
         dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
@@ -56,19 +60,33 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Bullet"))
+        if (!collision.CompareTag("Bullet") || !bIsLive)
             return;
 
-        health -= collision.GetComponent<Bullet>().damage; 
+        health -= collision.GetComponent<Bullet>().damage;
+        StartCoroutine(KnockBack());
 
         if(health < 0)
         {
             Dead();
         }
+        else
+        {
+            anim.SetTrigger("Hit");
+        }
+    }
+
+    IEnumerator KnockBack()
+    {
+        yield return new WaitForFixedUpdate();
+        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 dirVec = (transform.position - playerPos).normalized;
+        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
     void Dead()
     {
         gameObject.SetActive(false);
+        bIsLive = false;
     }
 }

@@ -43,4 +43,16 @@ public class PoolManager : MonoBehaviour
         return temp;
     }
 
+    public void UpdatePool(int index,float damage,int count,int pp)
+    {
+        foreach(GameObject item in pools[index])
+        {
+            if(index == 2)
+            {
+                item.GetComponent<Bullet>().pp = pp;
+                item.GetComponent<Bullet>().damage = damage;
+                
+            }
+        }
+    }
 }

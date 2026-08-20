@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8798815144277639799}
   - component: {fileID: 5316662959269888882}
   - component: {fileID: 4765012540526356257}
+  - component: {fileID: -7938134802806022030}
   m_Layer: 0
   m_Name: Bullet 1
   m_TagString: Bullet
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -153,3 +154,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   damage: 0
   per: 0
+--- !u!50 &-7938134802806022030
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500321808328248995}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

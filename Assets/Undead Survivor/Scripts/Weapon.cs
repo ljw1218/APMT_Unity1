@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Weapon : MonoBehaviour
 {
@@ -8,9 +10,11 @@ public class Weapon : MonoBehaviour
     public int count;
     public float speed;
     float timer;
+    int pp;
     Player player;
 
-    void Start()
+    List<GameObject> Bulletpool = new List<GameObject>();
+    void Awake()
     {
         Init();
     }
@@ -27,6 +31,7 @@ public class Weapon : MonoBehaviour
                 if(timer > speed)
                 {
                     timer = 0f;
+                    Fire();
                 }
                 break;
 
@@ -36,18 +41,20 @@ public class Weapon : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         {
-            LevelUp(20, 5);
+            LevelUp(3, 1, 0);
         }
     }
 
-    public void LevelUp(float damage, int count)
+    public void LevelUp(float damage, int count,int pp = 0)
     {
-        this.damage = damage;
+        this.damage += damage;
         this.count += count;
+        this.pp += pp; 
 
         if (id == 0)
             Batch();
-
+        else if (id == 1)
+            UpdateFire();
     }
 
     public void Init()
@@ -61,7 +68,9 @@ public class Weapon : MonoBehaviour
                 break;
 
             case 1:
-                speed = 0.3f;
+                speed = 1f;
+                pp = 1;
+                UpdateFire();
                 break;
 
             default:
@@ -97,10 +106,30 @@ public class Weapon : MonoBehaviour
             
         }
     }
-
+    
+    void UpdateFire()
+    {
+        GameManager.instance.pool.UpdatePool(prefabId, damage, count, pp);
+    }
+    
     void Fire()
     {
         if (!player.scanner.nearestTarget)
             return;
+
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = (targetPos - transform.position).normalized;
+
+        //Transform bullet = GameManager.instance.pool.GetGM(prefabId).transform;
+        for (int i = 0; i < count; i++)
+        {
+            Transform bullet = GameManager.instance.pool.GetGM(prefabId).transform;
+            Vector3 rotatedDir = Quaternion.Euler(0, 0, -15f * i) * dir;
+
+            bullet.position = transform.position;
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+            bullet.GetComponent<Bullet>().Init(damage, Define.Type_Bullet, rotatedDir, pp);
+            bullet.parent = transform;
+        }
     }
 }
