@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public bool bIsLive;
 
     Rigidbody2D rigid;
+    Collider2D coll;
     SpriteRenderer spriter;
     Animator anim;
     
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         rigid = GetComponent < Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        coll = GetComponent<Collider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         target = player.GetComponent<Rigidbody2D>();
     }
@@ -48,6 +50,10 @@ public class Enemy : MonoBehaviour
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         bIsLive = true;
         health = maxHealth;
+        coll.enabled = true;
+        rigid.simulated = true;
+        spriter.sortingOrder = 2;
+        anim.SetBool("Dead", false);
     }
 
     public void Init(SpawnData data)
@@ -68,7 +74,13 @@ public class Enemy : MonoBehaviour
 
         if(health < 0)
         {
-            Dead();
+            bIsLive = false;
+            coll.enabled = false;
+            rigid.simulated = false;
+            spriter.sortingOrder = 1;
+            anim.SetBool("Dead", true);
+            GameManager.instance.kill++;
+            GameManager.instance.GetExp();
         }
         else
         {
@@ -86,7 +98,8 @@ public class Enemy : MonoBehaviour
 
     void Dead()
     {
+        
         gameObject.SetActive(false);
-        bIsLive = false;
+        
     }
 }
