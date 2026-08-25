@@ -8,15 +8,26 @@ public class HUD : MonoBehaviour
     public enum InfoType { Exp, Level, Kill, Time, Health }
     public InfoType type;
 
-    TMP_Text myText;
+    TMP_Text LvText;
+    TMP_Text TimeText;
     Slider expSlider;
     Slider hpSlider;
 
     void Awake()
     {
-        myText = GetComponentInChildren<TMP_Text>();
-        expSlider = GetComponentInChildren<Slider>();
+        LvText = GetComponent<TMP_Text>();
+        expSlider = GetComponent<Slider>();
         hpSlider = GetComponent<Slider>();
+        TimeText = GetComponent<TMP_Text>();
+    }
+
+    void Start()
+    {
+        if (type == InfoType.Level)
+        {
+            LvText.text = $"Lv. {GameManager.instance.level + 1}";
+            LayoutRebuilder.ForceRebuildLayoutImmediate(LvText.transform.parent.GetComponent<RectTransform>());
+        }
     }
 
     void LateUpdate()
@@ -29,13 +40,16 @@ public class HUD : MonoBehaviour
                 expSlider.value = curExp / maxExp;
                 break;
             case InfoType.Level:
-                myText.text = $"Lv. {GameManager.instance.level + 1}";
+                LvText.text = $"Lv. {GameManager.instance.level + 1}";
                 break;
             case InfoType.Kill:
-
+                
                 break;
             case InfoType.Time:
-
+                float timeNow = GameManager.instance.gameTime;
+                int min = Mathf.FloorToInt(timeNow / 60);
+                int sec = Mathf.FloorToInt(timeNow % 60);
+                TimeText.text = $"{min:D2}:{sec:D2}";
                 break;
             case InfoType.Health:
                 float curHp = GameManager.instance.health;

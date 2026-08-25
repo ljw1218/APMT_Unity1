@@ -33,8 +33,6 @@ public class GameManager : MonoBehaviour
     {
         gameTime += Time.deltaTime;
 
-        if (gameTime > maxGameTime)
-            gameTime = maxGameTime;
     }
 
     public void GetExp()
