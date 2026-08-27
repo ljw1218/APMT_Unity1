@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     List<GameObject> Bulletpool = new List<GameObject>();
     void Awake()
     {
-        Init();
+        player = GameManager.instance.player;
     }
     void Update()
     {
@@ -57,9 +57,24 @@ public class Weapon : MonoBehaviour
             UpdateFire();
     }
 
-    public void Init()
+    public void Init(ItemData data)
     {
-        player = GetComponentInParent<Player>();
+        name = "Weapon " + data.itemId;
+        transform.parent = player.transform;
+        transform.localPosition = Vector3.zero;
+        id = data.itemId;
+        damage = data.baseDamage;
+        count = data.baseCount;
+
+        for(int i=0; i < GameManager.instance.pool.prefabs.Length; i++)
+        {
+            if(data.projectile == GameManager.instance.pool.prefabs[i])
+            {
+                prefabId = i;
+                break;
+            }
+        }
+
         switch(id)
         {
             case 0:
