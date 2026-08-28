@@ -25,29 +25,34 @@ public class Item : MonoBehaviour
         textLevel.text = $"Lv.{(level):D2}";
     }
 
+    public void SameUpdate()
+    {
+        if (level == 0)
+        {
+            GameObject newWeapon = new GameObject();
+            weapon = newWeapon.AddComponent<Weapon>();
+            weapon.Init(data);
+        }
+        else
+        {
+            int nextDamage = data.baseDamage;
+            int nextCount = 0;
+
+            nextDamage += data.baseDamage + data.damages[level];
+            nextCount += data.baseCount + data.counts[level];
+
+            weapon.LevelUp(nextDamage, nextCount);
+        }
+    }
     public void OnClick()
     {
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
+                SameUpdate();
                 break;
             case ItemData.ItemType.Range:
-                if (level == 0)
-                {
-                    GameObject newWeapon = new GameObject();
-                    weapon = newWeapon.AddComponent<Weapon>();
-                    weapon.Init(data);
-                }
-                else
-                {
-                    float nextDamage = data.baseDamage;
-                    int nextCount = 0;
-
-                    nextDamage += data.baseDamage + data.damages[level];
-                    nextCount += data.baseCount + data.counts[level];
-
-                    weapon.LevelUp(nextDamage,nextCount);
-                }
+                SameUpdate();
                 break;
             case ItemData.ItemType.Glove:
                 break;

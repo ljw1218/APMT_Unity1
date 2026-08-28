@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
+    public LevelUp uiLevelUp;
 
     [Header("# Player Info")]
     public int health;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
 
     [Header("# Game Control")]
+    public bool bGameLive;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
 
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxhealth;
+        uiLevelUp.Hide();
+        uiLevelUp.Select(1);
     }
     void Update()
     {
@@ -43,6 +47,20 @@ public class GameManager : MonoBehaviour
         {
             level++;
             exp = 0;
+            uiLevelUp.Show();
         }
     }
+
+    public void Stop()
+    {
+        bGameLive = false;
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        bGameLive = true;
+        Time.timeScale = 1;
+    }
+
 }

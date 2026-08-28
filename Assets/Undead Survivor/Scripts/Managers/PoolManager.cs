@@ -19,7 +19,7 @@ public class PoolManager : MonoBehaviour
         }
 
     }
-
+    
     public GameObject GetGM(int index)
     {
         GameObject temp = null;
@@ -43,14 +43,13 @@ public class PoolManager : MonoBehaviour
         return temp;
     }
 
-    public void UpdatePool(int index,float damage,int count,int pp)
+    public void UpdatePool(int index,int damage,int count,int pp)
     {
         foreach(GameObject item in pools[index])
         {
             if(index == 2)
             {
-                item.GetComponent<Bullet>().pp = pp;
-                item.GetComponent<Bullet>().damage = damage;
+                item.GetComponent<Bullet>().UpdateBullet(damage, pp);
                 
             }
         }

@@ -13,11 +13,12 @@ public class ItemData : ScriptableObject
     public string itemName;
     public string itemDesc;
     public Sprite itemIcon;
+    public int maxLevel;
 
     [Header("# Level Data")]
-    public float baseDamage;
+    public int baseDamage;
     public int baseCount;
-    public float[] damages;
+    public int[] damages;
     public int[] counts;
 
     [Header("# Weapon")]

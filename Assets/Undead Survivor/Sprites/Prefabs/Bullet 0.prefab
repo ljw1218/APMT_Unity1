@@ -152,4 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   damage: 0
-  per: 0
+  type: 0
+  pp: 0

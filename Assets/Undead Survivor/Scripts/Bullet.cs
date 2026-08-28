@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage;
-    public int per;
+    public int damage;
+    public Define.WeaponType type;
     public int pp;
     Rigidbody2D rigid;
     Vector3 startPos;
@@ -16,24 +16,33 @@ public class Bullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (Vector3.Distance(startPos, transform.position) >= GameManager.instance.player.scanner.scanRange * 2)
+        if (type == Define.WeaponType.Bullet)
         {
-            rigid.linearVelocity = Vector3.zero;
-            gameObject.SetActive(false);
+            if (Vector3.Distance(startPos, transform.position) >= GameManager.instance.player.scanner.scanRange * 2)
+            {
+                rigid.linearVelocity = Vector3.zero;
+                gameObject.SetActive(false);
+            }
         }
     }
-    public void Init(float damage,int per,Vector3 dir,int pp = 1)
+    public void Init(int damage,Define.WeaponType type,Vector3 dir,int pp = 1)
     {
         this.damage = damage;
-        this.per = per;
+        this.type = type;
 
-        if(per == 0)
+        if(type == Define.WeaponType.Bullet)
         {
             this.pp = pp;
             this.dir = dir * Define.Bullet_Speed;
             rigid.linearVelocity = this.dir;
             startPos = transform.position;
         }
+    }
+
+    public void UpdateBullet(int damage, int pp)
+    {
+        this.damage += damage;
+        this.pp = pp;
     }
     //private void OnEnable()
     //{

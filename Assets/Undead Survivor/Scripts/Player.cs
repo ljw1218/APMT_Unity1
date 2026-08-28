@@ -8,10 +8,20 @@ public class Player : MonoBehaviour
     public Scanner scanner;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
+
+    //public Weapon StartWeapon;
+    //public ItemData StartItemData;
+
     Animator anim;
     void Start()
     {
-        
+        //GameObject weapon = new GameObject();
+        //StartWeapon = weapon.AddComponent<Weapon>();
+        //StartWeapon.Init(StartItemData);
+        //float fStartDamage = StartItemData.baseDamage + StartItemData.damages[0];
+        //int fStartCount = StartItemData.baseCount + StartItemData.counts[0];
+
+        //StartWeapon.LevelUp(fStartDamage,fStartCount);
     }
 
     void Awake()

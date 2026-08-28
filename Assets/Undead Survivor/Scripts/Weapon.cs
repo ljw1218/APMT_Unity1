@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public int id;
     public int prefabId;
-    public float damage;
+    public int damage;
     public int count;
     public float speed;
     float timer;
@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void LevelUp(float damage, int count,int pp = 0)
+    public void LevelUp(int damage, int count,int pp = 0)
     {
         this.damage += damage;
         this.count += count;
@@ -117,7 +117,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up*1.2f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(damage,Define.Type_Infinity,Vector3.zero);
+            bullet.GetComponent<Bullet>().Init(damage,Define.WeaponType.Infinity,Vector3.zero);
             
         }
     }
@@ -143,7 +143,7 @@ public class Weapon : MonoBehaviour
 
             bullet.position = transform.position;
             bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
-            bullet.GetComponent<Bullet>().Init(damage, Define.Type_Bullet, rotatedDir, pp);
+            bullet.GetComponent<Bullet>().Init(damage, Define.WeaponType.Bullet, rotatedDir, pp);
             bullet.parent = transform;
         }
     }

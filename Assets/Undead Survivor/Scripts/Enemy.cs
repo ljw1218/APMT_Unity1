@@ -4,8 +4,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed;
-    public float maxHealth;
-    public float health;
+    public int maxHealth;
+    public int health;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     Vector2 dirVec;
@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
 
-        if(health < 0)
+        if(health <= 0)
         {
             bIsLive = false;
             coll.enabled = false;
