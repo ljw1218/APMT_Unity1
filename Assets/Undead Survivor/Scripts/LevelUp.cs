@@ -14,6 +14,7 @@ public class LevelUp : MonoBehaviour
 
     public void Show()
     {
+        Next();
         rect.localScale = Vector3.one;
         GameManager.instance.Stop();
     }
@@ -61,6 +62,11 @@ public class LevelUp : MonoBehaviour
                 int rand = Random.Range(0, CopyList.Count);
                 RanItem.Add(CopyList[rand]);
             }
+        }
+
+        for(int i=0; i<RanItem.Count; i++)
+        {
+            RanItem[i].gameObject.SetActive(true);
         }
 
         // 3. 만렙 아이템의 경우 나오지 않음 , 그외가 3이 안될경우 소비 아이템
