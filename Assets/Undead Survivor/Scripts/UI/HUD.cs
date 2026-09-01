@@ -5,13 +5,14 @@ using TMPro;
 
 public class HUD : MonoBehaviour
 {
-    public enum InfoType { Exp, Level, Kill, Time, Health }
+    public enum InfoType { Exp, Level, Time, Health }
     public InfoType type;
 
     TMP_Text LvText;
     TMP_Text TimeText;
     Slider expSlider;
     Slider hpSlider;
+    TMP_Text ClearText;
 
     void Awake()
     {
@@ -42,9 +43,7 @@ public class HUD : MonoBehaviour
             case InfoType.Level:
                 LvText.text = $"Lv. {GameManager.instance.level + 1}";
                 break;
-            case InfoType.Kill:
-                
-                break;
+            
             case InfoType.Time:
                 float timeNow = GameManager.instance.gameTime;
                 int min = Mathf.FloorToInt(timeNow / 60);

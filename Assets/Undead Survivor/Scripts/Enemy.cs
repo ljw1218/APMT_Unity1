@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     Vector2 dirVec;
 
     public bool bIsLive;
+    public bool bIsBoss;
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -62,6 +63,7 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        bIsBoss = data.bIsBoss;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -98,8 +100,11 @@ public class Enemy : MonoBehaviour
 
     void Dead()
     {
-        
         gameObject.SetActive(false);
-        
+        if(bIsBoss == true)
+        {
+            GameManager.instance.bisClear = true;
+            GameManager.instance.uiClear.Show();
+        }
     }
 }

@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
 
     public void UpdateBullet(int damage, int pp)
     {
-        this.damage += damage;
+        this.damage = damage;
         this.pp = pp;
     }
     //private void OnEnable()

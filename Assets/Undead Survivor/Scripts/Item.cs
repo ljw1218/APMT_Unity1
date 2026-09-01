@@ -35,13 +35,7 @@ public class Item : MonoBehaviour
         }
         else
         {
-            int nextDamage = data.baseDamage;
-            int nextCount = 0;
-
-            nextDamage += data.baseDamage + data.damages[level];
-            nextCount += data.baseCount + data.counts[level];
-
-            weapon.LevelUp(nextDamage, nextCount);
+            weapon.LevelUp(data.damages[level], data.counts[level]);
         }
     }
     public void OnClick()
@@ -63,7 +57,7 @@ public class Item : MonoBehaviour
         }
         level++;
 
-        if(level == data.damages.Length)
+        if(level == data.maxLevel)
         {
             GetComponent<Button>().interactable = false;
         }

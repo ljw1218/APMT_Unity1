@@ -2,6 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
+using System.Collections;
 
 public class Spawner : MonoBehaviour
 {
@@ -16,10 +17,18 @@ public class Spawner : MonoBehaviour
     {
         AreaTransform = GameObject.FindGameObjectWithTag("Area").transform;
     }
+    void Start()
+    {
+        StartCoroutine(SpawnBossTimer());
+    }
     void Update()
     {
+        if (GameManager.instance.gameTime > 40)
+        {
+            return;
+        }
         timer += Time.deltaTime;
-        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 15f),spawnData.Length-1);
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f),spawnData.Length-1);
 
         if (timer > spawnData[level].spawnTime)
         {
@@ -27,7 +36,16 @@ public class Spawner : MonoBehaviour
             Spawn();
         }
     }
-
+    IEnumerator SpawnBossTimer()
+    {
+        yield return new WaitForSeconds(GameManager.instance.nBossSpawnTime);
+        SpawnBoss();
+    }
+    void SpawnBoss()
+    {
+        level = 4;
+        Spawn();
+    }
     void Spawn()
     {
         Vector3 spawnPos = GetSpawnPosition(AreaTransform.GetComponent<BoxCollider2D>(), 5f);
@@ -58,6 +76,6 @@ public class SpawnData
     public float spawnTime;
     public int health;
     public float speed;
-
+    public bool bIsBoss;
     
 }

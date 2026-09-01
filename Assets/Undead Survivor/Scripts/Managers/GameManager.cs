@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Player player;
     public LevelUp uiLevelUp;
+    public Clear uiClear;
 
     [Header("# Player Info")]
     public bool bisLive;
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     public bool bGameLive;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
+    public int nBossSpawnTime;
+    public bool bisClear;
 
     void Awake()
     {
@@ -34,6 +37,9 @@ public class GameManager : MonoBehaviour
         health = maxhealth;
         uiLevelUp.Hide();
         uiLevelUp.Select(1);
+        uiClear.Hide();
+        bisClear = false;
+        
     }
     void Update()
     {

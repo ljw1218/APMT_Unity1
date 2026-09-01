@@ -17,9 +17,9 @@ MonoBehaviour:
   itemName: "\uC5FD\uCD1D"
   itemDesc: 
   itemIcon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
-  maxLevel: 3
-  baseDamage: 40
+  maxLevel: 4
+  baseDamage: 20
   baseCount: 1
-  damages: 280000001e000000280000002800000032000000
+  damages: 0a0000000a0000000a0000000a0000000a000000
   counts: 0100000001000000010000000100000001000000
   projectile: {fileID: 7500321808328248995, guid: dcfc40103bf75444cbdba1ea14b221f6, type: 3}
