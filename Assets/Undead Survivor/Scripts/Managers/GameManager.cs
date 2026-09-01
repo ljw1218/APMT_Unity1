@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
 
     [Header("# Player Info")]
-    public int health;
-    public int maxhealth = 100;
+    public bool bisLive;
+    public float health;
+    public float maxhealth = 100;
     public int level;
     public int kill;
     public int exp;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        bisLive = true;
         health = maxhealth;
         uiLevelUp.Hide();
         uiLevelUp.Select(1);
