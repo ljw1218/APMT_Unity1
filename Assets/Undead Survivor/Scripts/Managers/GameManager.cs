@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     public int level;
     public int kill;
     public int exp;
-    public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public int[] nextExp = { 3, 5, 10, 20, 150, 210, 280, 360, 450, 600 };
+    public float itemGetRange;
 
     [Header("# Game Control")]
     public bool bGameLive;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
         uiLevelUp.Select(1);
         uiClear.Hide();
         bisClear = false;
-        
+        itemGetRange = Define.Init_ItemGetRange;
     }
     void Update()
     {
@@ -48,11 +49,11 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void GetExp()
+    public void GetExp(int ExpData)
     {
-        exp++;
+        exp += ExpData;
 
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length - 1)])
+        if (exp >= nextExp[Mathf.Min(level, nextExp.Length - 1)])
         {
             level++;
             exp = 0;

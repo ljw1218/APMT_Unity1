@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int health;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
+    public CoinData coindata;
     Vector2 dirVec;
 
     public bool bIsLive;
@@ -20,7 +21,7 @@ public class Enemy : MonoBehaviour
     
     void Awake()
     {
-        rigid = GetComponent < Rigidbody2D>();
+        rigid = GetComponent <Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
@@ -57,13 +58,14 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Dead", false);
     }
 
-    public void Init(SpawnData data)
+    public void Init(MonsterData data)
     {
         anim.runtimeAnimatorController = animCon[data.spriteType];
-        speed = data.speed;
-        maxHealth = data.health;
-        health = data.health;
-        bIsBoss = data.bIsBoss;
+        speed = data.Speed;
+        maxHealth = data.MaxHealth;
+        health = data.MaxHealth;
+        bIsBoss = data.isBoss;
+        coindata = data.Coin;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,15 +83,22 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
-            GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            CreateCoin();
+            //GameManager.instance.kill++;
+            //GameManager.instance.GetExp(coindata);
         }
         else
         {
             anim.SetTrigger("Hit");
         }
     }
-
+    void CreateCoin()
+    {
+        GameObject coin = GameManager.instance.pool.GetGM((int)Define.PoolType.Coin);
+        coin.transform.position = transform.position;
+        CoinPickup pickup = coin.GetComponent<CoinPickup>();
+        pickup.Init(coindata);
+    }
     IEnumerator KnockBack()
     {
         yield return new WaitForFixedUpdate();

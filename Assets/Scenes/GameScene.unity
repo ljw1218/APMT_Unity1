@@ -37512,8 +37512,8 @@ RectTransform:
   m_GameObject: {fileID: 220983535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1180056281}
   m_Father: {fileID: 1642362968}
@@ -37578,7 +37578,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220983539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448091229}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnClearClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &220983539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38058,6 +38070,7 @@ Transform:
   - {fileID: 600323446}
   - {fileID: 1906753214}
   - {fileID: 1644089383}
+  - {fileID: 1720275883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &510438941
@@ -58073,6 +58086,7 @@ MonoBehaviour:
   - {fileID: 7557780957636842449, guid: 4756dec5fdb2de64c936565c4d01a6b8, type: 3}
   - {fileID: 275007201233782599, guid: f6dc66e64d4369142a183f88a2867367, type: 3}
   - {fileID: 7500321808328248995, guid: dcfc40103bf75444cbdba1ea14b221f6, type: 3}
+  - {fileID: 2145277944832471167, guid: 3cffdba1ac7a1a64896112f035181282, type: 3}
 --- !u!1 &1354721858
 GameObject:
   m_ObjectHideFlags: 0
@@ -67723,7 +67737,7 @@ MonoBehaviour:
   pool: {fileID: 1322440788}
   player: {fileID: 510438942}
   uiLevelUp: {fileID: 1365574472}
-  uiClear: {fileID: 0}
+  uiClear: {fileID: 220983537}
   bisLive: 0
   health: 0
   maxhealth: 100
@@ -67731,6 +67745,7 @@ MonoBehaviour:
   kill: 0
   exp: 0
   nextExp: 03000000050000000a0000006400000096000000d20000001801000068010000c201000058020000
+  itemGetRange: 0
   bGameLive: 1
   gameTime: 0
   maxGameTime: 20
@@ -77361,31 +77376,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   spawnData:
-  - spriteType: 0
-    spawnTime: 1
-    health: 40
-    speed: 1
-    bIsBoss: 0
-  - spriteType: 1
-    spawnTime: 1
-    health: 80
-    speed: 1.5
-    bIsBoss: 0
-  - spriteType: 2
-    spawnTime: 2
-    health: 130
-    speed: 1.8
-    bIsBoss: 0
-  - spriteType: 3
-    spawnTime: 2
-    health: 150
-    speed: 1.8
-    bIsBoss: 0
-  - spriteType: 4
-    spawnTime: 400
-    health: 300
-    speed: 2.5
-    bIsBoss: 1
+  - {fileID: 11400000, guid: c2c86a9b681fc084bb11524e942f5178, type: 2}
+--- !u!1 &1720275882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720275883}
+  m_Layer: 0
+  m_Name: MagnetRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720275883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720275882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 510438940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1773529332
 GameObject:
   m_ObjectHideFlags: 0

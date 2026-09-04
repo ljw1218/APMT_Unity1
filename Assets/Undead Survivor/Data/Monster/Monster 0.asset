@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd688ae8a034c440b69f632ecd8f961, type: 3}
+  m_Name: Monster 0
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterData
+  MonsterName: level1
+  isBoss: 0
+  spriteType: 0
+  spawnTime: 1
+  MaxHealth: 40
+  Speed: 1
+  Damage: 4
+  Coin: {fileID: 11400000, guid: 5f0ecb0ce66daa248a2a8c8acd781a69, type: 2}
+  AnimCon: {fileID: 9100000, guid: f2855d618fc8d9c499189d3f39b9cbbc, type: 2}

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
-    public float speed = 6f;
+    public float speed;
     public Scanner scanner;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
         //int fStartCount = StartItemData.baseCount + StartItemData.counts[0];
 
         //StartWeapon.LevelUp(fStartDamage,fStartCount);
+        speed = 6f;
     }
 
     void Awake()
@@ -66,6 +67,14 @@ public class Player : MonoBehaviour
             }
 
             anim.SetTrigger("Dead");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.CompareTag("Item"))
+        {
+
         }
     }
 }

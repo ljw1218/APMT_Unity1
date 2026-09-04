@@ -6,7 +6,8 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour
 {
-    public SpawnData[] spawnData;
+    [SerializeField]
+    public MonsterData[] spawnData;
     Transform AreaTransform;
 
     int level;
@@ -50,11 +51,12 @@ public class Spawner : MonoBehaviour
     {
         Vector3 spawnPos = GetSpawnPosition(AreaTransform.GetComponent<BoxCollider2D>(), 5f);
 
-        GameObject enemy = GameManager.instance.pool.GetGM(0);
+        GameObject enemy = GameManager.instance.pool.GetGM((int)Define.PoolType.Monster);
         enemy.transform.position = spawnPos;
         enemy.GetComponent<Enemy>().Init(spawnData[level]);
         
     }
+    
     Vector3 GetSpawnPosition(BoxCollider2D AreaColl, float margin)
     {
         Vector3 offset = Vector3.zero;
@@ -69,13 +71,13 @@ public class Spawner : MonoBehaviour
     }
 }
 
-[Serializable]
-public class SpawnData
-{
-    public int spriteType;
-    public float spawnTime;
-    public int health;
-    public float speed;
-    public bool bIsBoss;
+//[Serializable]
+//public class SpawnData
+//{
+//    public int spriteType;
+//    public float spawnTime;
+//    public int health;
+//    public float speed;
+//    public bool bIsBoss;
     
-}
+//}
