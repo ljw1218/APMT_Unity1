@@ -75,6 +75,6 @@ public class GameManager : MonoBehaviour
 
     public void OnClearClicked()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(Define.Scene.Main);
     }
 }

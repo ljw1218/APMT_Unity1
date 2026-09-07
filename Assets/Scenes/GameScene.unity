@@ -58034,7 +58034,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.757
+  m_Value: 0.744
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -58086,7 +58086,7 @@ MonoBehaviour:
   - {fileID: 7557780957636842449, guid: 4756dec5fdb2de64c936565c4d01a6b8, type: 3}
   - {fileID: 275007201233782599, guid: f6dc66e64d4369142a183f88a2867367, type: 3}
   - {fileID: 7500321808328248995, guid: dcfc40103bf75444cbdba1ea14b221f6, type: 3}
-  - {fileID: 2145277944832471167, guid: 3cffdba1ac7a1a64896112f035181282, type: 3}
+  - {fileID: 1138163325733769138, guid: 3cffdba1ac7a1a64896112f035181282, type: 3}
 --- !u!1 &1354721858
 GameObject:
   m_ObjectHideFlags: 0
@@ -77377,6 +77377,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   spawnData:
   - {fileID: 11400000, guid: c2c86a9b681fc084bb11524e942f5178, type: 2}
+  - {fileID: 11400000, guid: 70f2d6c47b9d37340bbdcdb5c6a5e090, type: 2}
+  - {fileID: 11400000, guid: ec143bb47ee604347bb172229cfd711a, type: 2}
+  - {fileID: 11400000, guid: da0490620771a174b8529f4f61017fb8, type: 2}
+  - {fileID: 11400000, guid: 6bed2a246a968bc4d8640417a42de9a5, type: 2}
 --- !u!1 &1720275882
 GameObject:
   m_ObjectHideFlags: 0
@@ -77386,6 +77390,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720275883}
+  - component: {fileID: 1720275884}
+  - component: {fileID: 1720275885}
   m_Layer: 0
   m_Name: MagnetRange
   m_TagString: Untagged
@@ -77408,6 +77414,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510438940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1720275884
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720275882}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.3
+--- !u!114 &1720275885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720275882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22faefb67c3f91459e12b21b1cf6bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttractArea
 --- !u!1 &1773529332
 GameObject:
   m_ObjectHideFlags: 0

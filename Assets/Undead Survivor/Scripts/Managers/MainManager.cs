@@ -10,7 +10,7 @@ public class MainManager : MonoBehaviour
 
     public void OnStartButton()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(Define.Scene.Load);
     }
 
     public void OnExitButton()
