@@ -57,7 +57,8 @@ public class Player : MonoBehaviour
         if (!GameManager.instance.bisLive)
             return;
 
-        GameManager.instance.health -= Time.deltaTime * 10;
+        int Edamage = collision.transform.GetComponent<Enemy>().Damage;
+        GameManager.instance.health -= Time.deltaTime * Edamage;
 
         if(GameManager.instance.health <= 0)
         {

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelUp uiLevelUp;
     public Clear uiClear;
+    public PlayerData playerData;
 
     [Header("# Player Info")]
     public bool bisLive;
