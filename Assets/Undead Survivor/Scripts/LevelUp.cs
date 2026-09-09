@@ -4,12 +4,13 @@ using UnityEngine;
 public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
-    Item[] items;
+    //Item[] items;
+    public List<Item> items;
 
     void Awake()
     {
         rect = GetComponent<RectTransform>();
-        items = GetComponentsInChildren<Item>(true);
+        //items = GetComponentsInChildren<Item>(true);
     }
 
     public void Show()
@@ -42,9 +43,9 @@ public class LevelUp : MonoBehaviour
         List<Item> CopyList = new List<Item>();
         List<Item> RanItem = new List<Item>();
 
-        for(int i=0; i<items.Length; i++)
+        for(int i=0; i<items.Count; i++)
         {
-            if (items[i].level == items[i].data.maxLevel)
+            if (items[i].level == items[i].ItemData.maxLevel)
             {
                 continue;
             }

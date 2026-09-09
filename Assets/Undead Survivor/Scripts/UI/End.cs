@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Clear : MonoBehaviour
+public class End : MonoBehaviour
 {
     RectTransform rect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

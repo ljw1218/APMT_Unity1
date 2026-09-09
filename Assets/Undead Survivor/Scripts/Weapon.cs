@@ -57,7 +57,7 @@ public class Weapon : MonoBehaviour
             UpdateFire();
     }
 
-    public void Init(ItemData data)
+    public void Init(WeaponItemData data)
     {
         name = "Weapon " + data.itemId;
         transform.parent = player.transform;
@@ -68,7 +68,7 @@ public class Weapon : MonoBehaviour
 
         for(int i=0; i < GameManager.instance.pool.prefabs.Length; i++)
         {
-            if(data.projectile == GameManager.instance.pool.prefabs[i])
+            if(data.Target == GameManager.instance.pool.prefabs[i])
             {
                 prefabId = i;
                 break;

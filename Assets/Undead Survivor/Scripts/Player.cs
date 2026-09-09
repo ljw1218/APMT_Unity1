@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
-    public float speed;
+    PlayerStat stat;
     public Scanner scanner;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -15,14 +15,7 @@ public class Player : MonoBehaviour
     Animator anim;
     void Start()
     {
-        //GameObject weapon = new GameObject();
-        //StartWeapon = weapon.AddComponent<Weapon>();
-        //StartWeapon.Init(StartItemData);
-        //float fStartDamage = StartItemData.baseDamage + StartItemData.damages[0];
-        //int fStartCount = StartItemData.baseCount + StartItemData.counts[0];
 
-        //StartWeapon.LevelUp(fStartDamage,fStartCount);
-        speed = 6f;
     }
 
     void Awake()
@@ -39,7 +32,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
+        Vector2 nextVec = inputVec.normalized * stat.Move_Speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
@@ -65,6 +58,7 @@ public class Player : MonoBehaviour
             for(int i=2; i<transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(false);
+                GameManager.instance.uiDead.Show();
             }
 
             anim.SetTrigger("Dead");

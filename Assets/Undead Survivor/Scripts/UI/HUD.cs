@@ -37,7 +37,8 @@ public class HUD : MonoBehaviour
         {
             case InfoType.Exp:
                 float curExp = GameManager.instance.exp;
-                float maxExp = GameManager.instance.nextExp[Mathf.Min(GameManager.instance.level, GameManager.instance.nextExp.Length-1)];
+                //float maxExp = GameManager.instance.nextExp[Mathf.Min(GameManager.instance.level, GameManager.instance.nextExp.Length-1)];
+                float maxExp = GameManager.instance.nextExp;
                 expSlider.value = curExp / maxExp;
                 break;
             case InfoType.Level:
@@ -52,7 +53,7 @@ public class HUD : MonoBehaviour
                 break;
             case InfoType.Health:
                 float curHp = GameManager.instance.health;
-                float maxHp = GameManager.instance.maxhealth;
+                float maxHp = GameManager.instance.playerStat.MaxHealth;
                 hpSlider.value = curHp / maxHp;
                 break;
         }

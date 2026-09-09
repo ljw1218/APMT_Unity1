@@ -8,6 +8,7 @@ public class Define
         public const string Load = "LoadScene";
         public const string Game = "GameScene";
     }
+    public static int Default_Index = 0;
     public static int TileSize = 30;
     public static float Bullet_Speed = 15f;
     public static float Init_ItemGetRange = 3f;

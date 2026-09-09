@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c01749f3b339646b733bb8679cc650, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  MaxHealth: 0
-  Damage: 0
-  CriticalPro: 0
-  CriticalDam: 0
-  ItemGetRange: 0
+  MaxHealth: 100
+  Damage: 30
+  Move_Speed: 2
+  Attack_Speed: 1
+  Attack_Range: 1
+  Critical_Pro: 3
+  Critical_Dam: 150
+  ItemGetRange: 1.3
+  ExpTerm: 5
