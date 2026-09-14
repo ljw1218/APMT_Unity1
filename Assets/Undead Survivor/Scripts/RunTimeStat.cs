@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RunTimeStat
+public class RunTimeStat : MonoBehaviour
 {
     public int MaxHealthScale { get; private set; }
     public int DamageScale { get; private set; }
@@ -11,7 +11,7 @@ public class RunTimeStat
     public float Critical_DamScale { get; private set; }
     public float ItemGetRangeScale { get; private set; }
 
-    public void Init()
+    void Awake()
     {
         MaxHealthScale = 1;
         DamageScale = 1;

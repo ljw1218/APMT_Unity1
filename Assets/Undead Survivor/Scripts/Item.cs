@@ -12,6 +12,10 @@ public class Item : MonoBehaviour
     Image icon;
     TMP_Text textLevel;
 
+    void Awake()
+    {
+        Init();
+    }
     void Init()
     {
         //icon = GetComponentsInChildren<Image>()[1];
@@ -31,13 +35,14 @@ public class Item : MonoBehaviour
     {
         if (level == 0)
         {
+            //수정 필요
             GameObject newWeapon = new GameObject();
             weapon = newWeapon.AddComponent<Weapon>();
-            weapon.Init(data);
+            //weapon.Init(data);
         }
         else
         {
-            weapon.LevelUp(data.damages[level], data.counts[level]);
+            //weapon.LevelUp(data.damages[level], data.counts[level]);
         }
     }
 

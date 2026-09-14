@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: W_0
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItemData
   itemId: 0
-  itemName: "\uCD1D"
+  itemName: "\uD30C\uC774\uD504"
   itemDesc: Default_Weapon
   itemIcon: {fileID: 4208212924717799472, guid: b21afcd57f6c17a4d91b1bf9056949e9, type: 3}
   maxLevel: 3
   type: 0
   baseDamage: 0
   baseCount: 0
-  damages: 
+  damages: 000000000000000000000000
   counts: 
   Target: {fileID: 0}

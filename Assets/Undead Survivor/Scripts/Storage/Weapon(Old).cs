@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Weapon : MonoBehaviour
+public class WeaponOld : MonoBehaviour
 {
     public int id;
     public int prefabId;

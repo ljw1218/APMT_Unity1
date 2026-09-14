@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
-    PlayerStat stat;
+    RunTimeStat Rstat;
+    PlayerStat Pstat;
     public Scanner scanner;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -15,7 +16,8 @@ public class Player : MonoBehaviour
     Animator anim;
     void Start()
     {
-
+        Rstat = GameManager.instance.RunStat;
+        Pstat = GameManager.instance.playerStat;
     }
 
     void Awake()
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
+        
     }
     void Update()
     {
@@ -32,7 +35,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector2 nextVec = inputVec.normalized * stat.Move_Speed * Time.fixedDeltaTime;
+        Vector2 nextVec = inputVec.normalized * Pstat.Move_Speed * Rstat.Move_SpeedScale *Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
