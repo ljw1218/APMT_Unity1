@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
     public PlayerData BaseData;
-    RunTimeStat RunStat;
+    public RunTimeStat RunStat;
     
     public int MaxHealth {  get; private set; }
     public int Damage { get; private set; }
@@ -14,9 +14,9 @@ public class PlayerStat : MonoBehaviour
     public float Critical_Dam { get; private set; }
     public float ItemGetRange { get; private set; }
 
-    private void Start()
+    void Start()
     {
-        RunStat = GameManager.instance.RunStat;
+        
     }
     public void RecalculateStats()
     {

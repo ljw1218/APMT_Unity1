@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         bisLive = true;
         InitStat();
         uiLevelUp.Hide();
-        uiLevelUp.Select(Define.Default_Index);
+        //uiLevelUp.Select(Define.Default_Index);
         uiClear.Hide();
         bisClear = false;
     }

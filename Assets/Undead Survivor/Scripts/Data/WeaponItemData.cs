@@ -7,6 +7,7 @@ public class WeaponItemData : ItemData
     public WeaponType type;
 
     [Header("# Level Data")]
+    public float attackTerm;
     public int baseDamage;
     public int baseCount;
     public int[] damages;
