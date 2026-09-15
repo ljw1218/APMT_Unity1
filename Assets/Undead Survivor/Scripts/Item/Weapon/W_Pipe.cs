@@ -18,26 +18,38 @@ public class W_Pipe : Weapon
 
     [SerializeField] private float hitWidth = 0.9f;
     [SerializeField] private LayerMask layer;
-    private string EnemyTag = "Enemy";
-    private bool isAttack = false;
 
-    protected override void Attack()
+    private Vector2 LockedStart;
+    private Vector2 LockedEnd;
+
+    protected override void Awake()
     {
-        if (isAttack)
-            return;
-        StartCoroutine(AttackRoutine());
+        base.Awake();
     }
 
-    private IEnumerator AttackRoutine()
+    protected override void Update()
     {
-        isAttack = true;
+        base.Update();
+    }
+    
+    protected override IEnumerator AttackRoutine()
+    {
+        bool isLeft = mousePos.x < BasePos.x;
+        int flip = isLeft ? -1 : 1;
 
-        Vector2 LockedStart = transform.parent.TransformPoint(StartLocation);
-        Vector2 LockedEnd = transform.parent.TransformPoint(EndLocation);
+        float fromAngle = isLeft ? -1 * PreAngle : PreAngle;
+        float toAngle = isLeft ? -1 * AfterAngle : AfterAngle;
+        Vector2 from = isLeft ? new Vector2(-1*StartLocation.x,StartLocation.y) : StartLocation;
+        Vector2 to = isLeft ? new Vector2(-1*EndLocation.x,EndLocation.y) : EndLocation;
 
-        transform.localPosition = StartLocation;
-        transform.localRotation = Quaternion.Euler(0f, 0f, PreAngle);
-        trail.emitting = false;
+        sr.flipX = !isLeft;
+
+        LockedStart = BasePos + from;
+        LockedEnd = BasePos + to;
+
+        transform.localPosition = LockedStart;
+        transform.localRotation = Quaternion.Euler(0f, 0f, fromAngle);
+        
         yield return new WaitForSeconds(WaitTime);
 
         trail.Clear();
@@ -45,9 +57,11 @@ public class W_Pipe : Weapon
         CheckHit(LockedStart,LockedEnd);
 
         transform.position = LockedEnd;
-        transform.rotation = Quaternion.Euler(0f, 0f, AfterAngle);
+        transform.rotation = Quaternion.Euler(0f, 0f, toAngle);
 
-        yield return null;
+        yield return new WaitForSeconds(WaitTime);
+        trail.emitting = false;
+        yield return false;
     }
 
     private void CheckHit(Vector2 StartPosition,Vector2 EndPosition)
@@ -77,9 +91,6 @@ public class W_Pipe : Weapon
 
     private void OnDrawGizmosSelected()
     {
-        Vector3 LockedStart = transform.parent.TransformPoint(StartLocation);
-        Vector3 LockedEnd = transform.parent.TransformPoint(EndLocation);
-
         Gizmos.color = Color.red;
         Gizmos.DrawLine(LockedStart,LockedEnd);
         Gizmos.DrawWireSphere(LockedStart, hitWidth);

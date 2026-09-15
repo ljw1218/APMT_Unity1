@@ -18,9 +18,9 @@ MonoBehaviour:
   itemIcon: {fileID: 4208212924717799472, guid: b21afcd57f6c17a4d91b1bf9056949e9, type: 3}
   maxLevel: 3
   type: 0
-  attackTerm: 1
-  baseDamage: 0
-  baseCount: 0
+  attackTerm: 1.5
+  baseDamage: 40
+  baseCount: 1
   damages: 000000000000000000000000
   counts: 
   Target: {fileID: 0}
