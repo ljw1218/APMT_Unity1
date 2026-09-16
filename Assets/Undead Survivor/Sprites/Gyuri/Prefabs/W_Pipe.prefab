@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7729865520397788958}
   - component: {fileID: 4520273176230930787}
   - component: {fileID: 6342208880899043350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: W_Pipe
-  m_TagString: Bullet
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
   m_LocalPosition: {x: 2.23, y: -0.73, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3039406303876441011}
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 268c2db0ee36e964abc28d54c4bc587c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}

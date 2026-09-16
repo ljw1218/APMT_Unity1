@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: P_0
   m_EditorClassIdentifier: Assembly-CSharp::PassiveItemData
   itemId: 0
-  itemName: 
-  itemDesc: 
+  itemName: "\uC2E0\uBC1C"
+  itemDesc: "\uC774\uB3D9\uC18D\uB3C4\uAC00 (20 / 30 / 40)% \uC99D\uAC00\uD55C\uB2E4"
   itemIcon: {fileID: -966295699, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   maxLevel: 3
   type: 1

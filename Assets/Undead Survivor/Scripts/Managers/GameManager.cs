@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public End uiClear;
     public End uiDead;
     public PlayerStat playerStat;
-    public RunTimeStat RunStat;
 
     [Header("# Player Info")]
     public bool bisLive;

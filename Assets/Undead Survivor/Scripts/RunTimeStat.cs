@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RunTimeStat : MonoBehaviour
 {
+    public static RunTimeStat instance;
     public int MaxHealthScale { get; private set; }
     public int DamageScale { get; private set; }
     public float Move_SpeedScale { get; private set; }
@@ -13,6 +14,7 @@ public class RunTimeStat : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         MaxHealthScale = 1;
         DamageScale = 1;
         Move_SpeedScale = 1;
@@ -21,5 +23,19 @@ public class RunTimeStat : MonoBehaviour
         Critical_Pro_Added = 0;
         Critical_DamScale = 1;
         ItemGetRangeScale = 1;
+    }
+
+    void UpdateData(PassiveItemData data,int nlevel)
+    {
+        switch(data.type)
+        {
+            case ItemData.PassiveType.Attack:
+                break;
+            case ItemData.PassiveType.AttackSpeed:
+                break;
+            case ItemData.PassiveType.MoveSpeed:
+                Move_SpeedScale = data.value[nlevel];
+                break;
+        }
     }
 }

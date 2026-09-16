@@ -9,22 +9,36 @@ public class Weapon : MonoBehaviour
     public float AttackTerm { get; private set; }
     private float AttackTime;
     private bool isAttack;
+    protected int level;
+    protected int count;
     protected SpriteRenderer sr;
     protected Vector2 BasePos;
     protected Vector3 mousePos;
-    [SerializeField] protected Player player;
+    protected Player player;
+    private RunTimeStat Rstat;
     
     protected virtual void Awake()
     {
-        Damage = Data.baseDamage;
-        AttackTerm = Data.attackTerm;
-        AttackTime = 0;
         isAttack = false;
         transform.localScale = Vector3.one;
         sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
+        level = 1;
+        count = Data.baseCount;
     }
 
+    protected virtual void Start()
+    {
+        player = GameManager.instance.player;
+        Rstat = RunTimeStat.instance;
+        Damage = Data.baseDamage * Rstat.DamageScale;
+        AttackTerm = Data.attackTerm * (1 / Rstat.Attack_SpeedScale);
+        AttackTime = 0;
+    }
+    protected void LevelUp(int nlevel)
+    {
+        level = nlevel;
+    }    
     protected IEnumerator Attack()
     {
         isAttack = true;

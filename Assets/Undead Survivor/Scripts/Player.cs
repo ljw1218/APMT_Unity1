@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     Animator anim;
     void Start()
     {
-        Rstat = GameManager.instance.RunStat;
+        Rstat = RunTimeStat.instance;
         Pstat = GameManager.instance.playerStat;
     }
 

@@ -11,12 +11,13 @@ public class ItemData : ScriptableObject
     }
     public enum WeaponType
     {
-        Melee,
-        Range,
+        Default,
+        Rotate,
     }
     [Header("# Main Info")]
     public int itemId;
     public string itemName;
+    [TextArea(1,6)]
     public string itemDesc;
     public Sprite itemIcon;
     public int maxLevel;
