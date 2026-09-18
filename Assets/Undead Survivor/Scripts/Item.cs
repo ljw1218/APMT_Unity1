@@ -33,18 +33,19 @@ public class Item : MonoBehaviour
         border.color = data is WeaponItemData ? Color.red : Color.green;
         icon.sprite = data.itemIcon;
         itemText.text = data.itemDesc;
+        NameText.text = data.name;
         level = nlevel;
     }
     public void SameWeaponUpdate(WeaponItemData data)
     {
         if (level == 0)
         {
-            //수정 필요
-            
+            level++;
+            WeaponManager.instance.AddWeapon(data);
         }
         else
         {
-            
+            //수치변경
         }
     }
 
@@ -54,6 +55,7 @@ public class Item : MonoBehaviour
     }
     public void OnClick()
     {
+        LevelUp.ItemDict[ItemData] = level;
         if(ItemData is WeaponItemData weaponData)
         {
             SameWeaponUpdate(weaponData);

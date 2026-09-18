@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 12152962}
   - component: {fileID: 12152961}
   m_Layer: 5
-  m_Name: ItemBorder1
+  m_Name: ItemBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19159,7 +19159,7 @@ GameObject:
   - component: {fileID: 132830258}
   - component: {fileID: 132830257}
   m_Layer: 5
-  m_Name: ItemText1
+  m_Name: ItemText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38654,6 +38654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStat
   BaseData: {fileID: 11400000, guid: 577b51b8b4a98a84f9194d250cb5f439, type: 2}
+  RunStat: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -39145,7 +39146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -966295699, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ec1d27f41982004d93c4be5bff6e109, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39271,10 +39272,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 846513934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830800685
 MonoBehaviour:
@@ -39408,10 +39409,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1180669991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000019073486}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835976295
 MonoBehaviour:
@@ -49186,7 +49187,7 @@ GameObject:
   - component: {fileID: 899767425}
   - component: {fileID: 899767424}
   m_Layer: 5
-  m_Name: NameBorder1
+  m_Name: NameBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49523,7 +49524,7 @@ GameObject:
   - component: {fileID: 1061456200}
   - component: {fileID: 1061456199}
   m_Layer: 5
-  m_Name: Icon1
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49634,7 +49635,7 @@ GameObject:
   - component: {fileID: 1102884281}
   - component: {fileID: 1102884280}
   m_Layer: 5
-  m_Name: TextBorder1
+  m_Name: TextBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60080,7 +60081,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d367d22b7766c0d4bb269081ccd828ae, type: 2}
   - {fileID: 11400000, guid: f2b7f360f300e1549805535206e20fdd, type: 2}
   - {fileID: 11400000, guid: 55af9bc6b117d9943860d1bb69c0ec55, type: 2}
-  - {fileID: 11400000, guid: 933e3f6ace78df247bfd1572a12f6498, type: 2}
   itemslot:
   - {fileID: 1976061572}
   - {fileID: 1361287149}
@@ -69386,7 +69386,7 @@ GameObject:
   - component: {fileID: 1423264385}
   - component: {fileID: 1423264384}
   m_Layer: 5
-  m_Name: NameText1
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69406,10 +69406,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 899767423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423264384
 MonoBehaviour:
@@ -69600,6 +69600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStat
   BaseData: {fileID: 11400000, guid: 577b51b8b4a98a84f9194d250cb5f439, type: 2}
+  RunStat: {fileID: 1448091230}
 --- !u!1 &1555384605
 GameObject:
   m_ObjectHideFlags: 0
@@ -79676,7 +79677,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &1976061569
 MonoBehaviour:
   m_ObjectHideFlags: 0

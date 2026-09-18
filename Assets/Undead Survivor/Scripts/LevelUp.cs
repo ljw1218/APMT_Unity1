@@ -8,9 +8,10 @@ public class LevelUp : MonoBehaviour
     //Item[] items;
     public List<ItemData> ItemList;
 
-    public Dictionary<ItemData, int> ItemDict;
+    public static Dictionary<ItemData, int> ItemDict = new();
 
     [SerializeField] private Item[] itemslot;
+    [SerializeField] private ItemData ItemPostion;
 
     void Awake()
     {
@@ -64,13 +65,31 @@ public class LevelUp : MonoBehaviour
         {
             for (int i = 0; i < CopyList.Count; i++)
                 RanItem.Add(CopyList[i]);
+            for (int i=CopyList.Count; i<3; i++)
+            {
+                RanItem.Add(ItemPostion);
+            }
         }
         else
         {
+            int[] ToCheck = { -1, -1, -1 };
             while (RanItem.Count < 3)
             {
                 int rand = Random.Range(0, CopyList.Count);
-                RanItem.Add(CopyList[rand]);
+                bool bDup = false;
+                foreach(int n in ToCheck)
+                {
+                    if(rand == n)
+                    {
+                        bDup = true;
+                        break;
+                    }
+                }
+                if (!bDup)
+                {
+                    ToCheck[RanItem.Count] = rand;
+                    RanItem.Add(CopyList[rand]);
+                }
             }
         }
 

@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     {
         nextExp = playerStat.BaseData.ExpTerm;
         //RunStat.Init();
+        playerStat.Init();
         playerStat.RecalculateStats();
         health = playerStat.MaxHealth;
     }

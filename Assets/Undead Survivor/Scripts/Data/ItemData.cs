@@ -8,6 +8,7 @@ public class ItemData : ScriptableObject
         Attack,
         MoveSpeed,
         AttackSpeed,
+        Potion,
     }
     public enum WeaponType
     {

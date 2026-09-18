@@ -21,8 +21,6 @@ public class Weapon : MonoBehaviour
     {
         isAttack = false;
         transform.localScale = Vector3.one;
-        sr = GetComponent<SpriteRenderer>();
-        sr.enabled = false;
         level = 1;
         count = Data.baseCount;
     }
@@ -35,19 +33,23 @@ public class Weapon : MonoBehaviour
         AttackTerm = Data.attackTerm * (1 / Rstat.Attack_SpeedScale);
         AttackTime = 0;
     }
-    protected void LevelUp(int nlevel)
+    public void LevelUp(int nlevel)
     {
         level = nlevel;
-    }    
+        UpdateData();
+    }
+    protected virtual void UpdateData()
+    {
+        Damage = Data.damages[level] * Rstat.DamageScale;
+        AttackTerm = Data.attackTerm * (1 / Rstat.Attack_SpeedScale);
+    }
     protected IEnumerator Attack()
     {
         isAttack = true;
-        sr.enabled = true;
         BasePos = player.transform.position;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         yield return StartCoroutine(AttackRoutine());
         isAttack = false;
-        sr.enabled = false;
     }
 
     protected virtual void Update()

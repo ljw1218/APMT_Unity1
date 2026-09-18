@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc2e459cd3eed3c4bb5d1703421adfee, type: 3}
-  m_Name: P_0
+  m_Name: P_MoveSpeed
   m_EditorClassIdentifier: Assembly-CSharp::PassiveItemData
   itemId: 0
   itemName: "\uC2E0\uBC1C"
   itemDesc: "\uC774\uB3D9\uC18D\uB3C4\uAC00 (20 / 30 / 40)% \uC99D\uAC00\uD55C\uB2E4"
-  itemIcon: {fileID: -966295699, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  itemIcon: {fileID: 21300000, guid: 0ec1d27f41982004d93c4be5bff6e109, type: 3}
   maxLevel: 3
   type: 1
   value:

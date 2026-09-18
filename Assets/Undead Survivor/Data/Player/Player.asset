@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   MaxHealth: 100
   Damage: 30
-  Move_Speed: 2
+  Move_Speed: 5
   Attack_Speed: 1
   Attack_Range: 1
   Critical_Pro: 3
   Critical_Dam: 150
   ItemGetRange: 1.3
-  ExpTerm: 5
+  ExpTerm: 1

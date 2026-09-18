@@ -25,6 +25,8 @@ public class W_Pipe : Weapon
     protected override void Awake()
     {
         base.Awake();
+        sr = GetComponent<SpriteRenderer>();
+        sr.enabled = false;
     }
 
     protected override void Update()
@@ -34,6 +36,7 @@ public class W_Pipe : Weapon
     
     protected override IEnumerator AttackRoutine()
     {
+        sr.enabled = true;
         bool isLeft = mousePos.x < BasePos.x;
         int flip = isLeft ? -1 : 1;
 
@@ -61,6 +64,7 @@ public class W_Pipe : Weapon
 
         yield return new WaitForSeconds(WaitTime);
         trail.emitting = false;
+        sr.enabled = false;
         yield return false;
     }
 

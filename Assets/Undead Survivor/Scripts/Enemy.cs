@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Bullet") || !bIsLive)
+        if (!collision.CompareTag("Weapon") || !bIsLive)
             return;
 
         int rDamage = collision.GetComponent<Weapon>().Damage;
