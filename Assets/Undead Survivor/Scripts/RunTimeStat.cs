@@ -25,7 +25,7 @@ public class RunTimeStat : MonoBehaviour
         ItemGetRangeScale = 1;
     }
 
-    void UpdateData(PassiveItemData data,int nlevel)
+    public void UpdateData(PassiveItemData data,int nlevel)
     {
         switch(data.type)
         {
@@ -35,6 +35,12 @@ public class RunTimeStat : MonoBehaviour
                 break;
             case ItemData.PassiveType.MoveSpeed:
                 Move_SpeedScale = data.value[nlevel];
+                break;
+            case ItemData.PassiveType.Potion:
+                Player.instance.hp += 15;
+                break;
+            default:
+                Debug.Log($"Implementation required : {data.itemName} !!");
                 break;
         }
     }

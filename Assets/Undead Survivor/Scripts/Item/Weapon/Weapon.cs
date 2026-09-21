@@ -27,15 +27,15 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Start()
     {
-        player = GameManager.instance.player;
+        player = Player.instance;
         Rstat = RunTimeStat.instance;
         Damage = Data.baseDamage * Rstat.DamageScale;
         AttackTerm = Data.attackTerm * (1 / Rstat.Attack_SpeedScale);
         AttackTime = 0;
     }
-    public void LevelUp(int nlevel)
+    public void LevelUp()
     {
-        level = nlevel;
+        level++;
         UpdateData();
     }
     protected virtual void UpdateData()

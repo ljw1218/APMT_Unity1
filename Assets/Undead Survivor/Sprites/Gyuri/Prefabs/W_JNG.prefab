@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3389765721709396539}
   - component: {fileID: 1803880514757180098}
   - component: {fileID: 3045902511434657371}
-  - component: {fileID: 7098443551286203892}
+  - component: {fileID: 7586636733285764101}
   m_Layer: 8
   m_Name: W_JNG
   m_TagString: Weapon
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.78, y: 0.74}
   m_EdgeRadius: 0
---- !u!114 &7098443551286203892
+--- !u!114 &7586636733285764101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4098e3652fdb10c49affd02448834112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::W_JNG
-  Data: {fileID: 11400000, guid: f2b7f360f300e1549805535206e20fdd, type: 2}
-  JNGPrefab: {fileID: 7098443551286203892}
+  Data: {fileID: 0}
+  JNGPrefab: {fileID: 0}
   radius: 2
   RotateSpeed: 180
   isAlive: 0

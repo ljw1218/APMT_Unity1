@@ -16,7 +16,7 @@ public class WeaponOld : MonoBehaviour
     List<GameObject> Bulletpool = new List<GameObject>();
     void Awake()
     {
-        player = GameManager.instance.player;
+        player = Player.instance;
     }
     void Update()
     {

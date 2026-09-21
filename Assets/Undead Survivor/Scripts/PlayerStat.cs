@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
+    public static PlayerStat instance;
     public PlayerData BaseData;
     RunTimeStat RunStat;
     
@@ -13,7 +14,7 @@ public class PlayerStat : MonoBehaviour
     public float Critical_Pro { get; private set; }
     public float Critical_Dam { get; private set; }
     public float ItemGetRange { get; private set; }
-
+    public int ExpTerm { get; private set; }
     public void Init()
     {
         RunStat = RunTimeStat.instance;

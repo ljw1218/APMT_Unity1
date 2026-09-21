@@ -7,22 +7,12 @@ public class GameManager : MonoBehaviour
 
     [Header("# Game Object")]
     public PoolManager pool;
-    public Player player;
     public LevelUp uiLevelUp;
     public End uiClear;
     public End uiDead;
-    public PlayerStat playerStat;
 
     [Header("# Player Info")]
     public bool bisLive;
-    public float health;
-    //public float maxhealth = 100;
-    public int level;
-    public int kill;
-    public int exp;
-    //public int[] nextExp = { 3, 5, 10, 20, 150, 210, 280, 360, 450, 600 };
-    public int nextExp;
-    public float itemGetRange;
 
     [Header("# Game Control")]
     public bool bGameLive;
@@ -39,9 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         bisLive = true;
-        InitStat();
         uiLevelUp.Hide();
-        //uiLevelUp.Select(Define.Default_Index);
         uiClear.Hide();
         bisClear = false;
     }
@@ -50,26 +38,6 @@ public class GameManager : MonoBehaviour
         gameTime += Time.deltaTime;
 
     }
-    void InitStat()
-    {
-        nextExp = playerStat.BaseData.ExpTerm;
-        //RunStat.Init();
-        playerStat.Init();
-        playerStat.RecalculateStats();
-        health = playerStat.MaxHealth;
-    }
-    public void GetExp(int ExpData)
-    {
-        exp += ExpData;
-
-        if (exp >= nextExp)
-        {
-            level++;
-            exp = 0;
-            uiLevelUp.Show();
-        }
-    }
-
     public void Stop()
     {
         bGameLive = false;

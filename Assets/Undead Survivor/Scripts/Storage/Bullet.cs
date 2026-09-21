@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         if (type == Define.WeaponType.Bullet)
         {
-            if (Vector3.Distance(startPos, transform.position) >= GameManager.instance.player.scanner.scanRange * 2)
+            if (Vector3.Distance(startPos, transform.position) >= Player.instance.scanner.scanRange * 2)
             {
                 rigid.linearVelocity = Vector3.zero;
                 gameObject.SetActive(false);

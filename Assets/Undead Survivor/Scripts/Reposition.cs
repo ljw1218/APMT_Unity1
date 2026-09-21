@@ -27,7 +27,7 @@ public class Reposition : MonoBehaviour
 
     void Start()
     {
-        player = GameManager.instance.player;
+        player = Player.instance;
         CurrentCenter = new Vector2Int(Mathf.RoundToInt(player.transform.position.x),Mathf.RoundToInt(player.transform.position.y));
     }
     void Update()

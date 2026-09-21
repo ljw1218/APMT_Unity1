@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
     
     void OnEnable()
     {
-        target = GameManager.instance.player.GetComponent<Rigidbody2D>();
+        target = Player.instance.GetComponent<Rigidbody2D>();
         bIsLive = true;
         health = maxHealth;
         coll.enabled = true;
@@ -72,11 +72,11 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Weapon") || !bIsLive)
-            return;
+        //if (!collision.CompareTag("Weapon") || !bIsLive)
+        //    return;
 
-        int rDamage = collision.GetComponent<Weapon>().Damage;
-        HitAction(rDamage);
+        //int rDamage = collision.GetComponent<Weapon>().Damage;
+        //HitAction(rDamage);
     }
 
     public void HitAction(int rDamage)
@@ -110,7 +110,7 @@ public class Enemy : MonoBehaviour
     IEnumerator KnockBack()
     {
         yield return new WaitForFixedUpdate();
-        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 playerPos = Player.instance.transform.position;
         Vector3 dirVec = (transform.position - playerPos).normalized;
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }

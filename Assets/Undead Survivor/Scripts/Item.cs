@@ -1,3 +1,4 @@
+using System.Data.Common;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +34,7 @@ public class Item : MonoBehaviour
         border.color = data is WeaponItemData ? Color.red : Color.green;
         icon.sprite = data.itemIcon;
         itemText.text = data.itemDesc;
-        NameText.text = data.name;
+        NameText.text = data.itemName;
         level = nlevel;
     }
     public void SameWeaponUpdate(WeaponItemData data)
@@ -45,13 +46,22 @@ public class Item : MonoBehaviour
         }
         else
         {
+            level++;
+            if(level > data.maxLevel)
+            {
+                Debug.Log("Over the MaxLevel");
+                return;
+            }
+            WeaponManager.instance.LevelUpWeapon(data);
             //수치변경
         }
     }
 
     public void SamePassiveUpdate(PassiveItemData data)
     {
+        level++;
 
+        RunTimeStat.instance.UpdateData(data, level);
     }
     public void OnClick()
     {
@@ -64,5 +74,6 @@ public class Item : MonoBehaviour
         {
             SamePassiveUpdate(passive);
         }
+        LevelUp.ItemDict[ItemData]++;
     }
 }

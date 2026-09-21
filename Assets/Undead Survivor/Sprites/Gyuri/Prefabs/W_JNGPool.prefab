@@ -73,6 +73,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::W_JNGPool
   Data: {fileID: 11400000, guid: f2b7f360f300e1549805535206e20fdd, type: 2}
-  JNGPrefab: {fileID: 7098443551286203892, guid: 40daa7ecc9af76c4a80eb6ee6ac34b42, type: 3}
+  JNGPrefab: {fileID: 7586636733285764101, guid: 40daa7ecc9af76c4a80eb6ee6ac34b42, type: 3}
   radius: 2
   RotateSpeed: 180

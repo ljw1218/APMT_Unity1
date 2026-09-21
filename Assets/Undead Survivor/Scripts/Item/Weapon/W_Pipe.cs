@@ -8,7 +8,7 @@ public class W_Pipe : Weapon
 {
     [SerializeField] private TrailRenderer trail;
 
-    [SerializeField] private float WaitTime = 0.3f;
+    [SerializeField] private float WaitTime;
 
     [SerializeField] private float PreAngle = 10f;
     [SerializeField] private float AfterAngle = -75f;
@@ -47,13 +47,26 @@ public class W_Pipe : Weapon
 
         sr.flipX = !isLeft;
 
-        LockedStart = BasePos + from;
-        LockedEnd = BasePos + to;
+        //LockedStart = BasePos + from;
+        //LockedEnd = BasePos + to;
 
-        transform.localPosition = LockedStart;
-        transform.localRotation = Quaternion.Euler(0f, 0f, fromAngle);
-        
-        yield return new WaitForSeconds(WaitTime);
+        //transform.localPosition = LockedStart;
+        //transform.localRotation = Quaternion.Euler(0f, 0f, fromAngle);
+        transform.rotation = Quaternion.Euler(0f, 0f, fromAngle);
+
+        //yield return new WaitForSeconds(WaitTime);
+        float t = 0f;
+        while (t < WaitTime)
+        {
+            transform.position = (Vector2)player.transform.position + from;
+            t += Time.deltaTime;
+            yield return null;
+        }
+        Vector2 origin = player.transform.position;
+        LockedStart = origin + from;
+        LockedEnd = origin + to;
+
+        transform.position = LockedStart;
 
         trail.Clear();
         trail.emitting = true;

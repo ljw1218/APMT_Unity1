@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     public Vector2 inputVec;
     RunTimeStat Rstat;
     PlayerStat Pstat;
@@ -10,14 +11,39 @@ public class Player : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriter;
 
+    public int level,exp;
+    public float hp;
+    public int nextExp;
+
     //public Weapon StartWeapon;
     //public ItemData StartItemData;
 
     Animator anim;
+
+    void InitStat()
+    {
+        nextExp = Pstat.BaseData.ExpTerm;
+        Pstat.Init();
+        Pstat.RecalculateStats();
+        hp = Pstat.MaxHealth;
+        level = 0;
+    }
+    public void GetExp(int ExpData)
+    {
+        exp += ExpData;
+
+        if (exp >= nextExp)
+        {
+            level++;
+            exp = 0;
+            GameManager.instance.uiLevelUp.Show();
+        }
+    }
     void Start()
     {
         Rstat = RunTimeStat.instance;
-        Pstat = GameManager.instance.playerStat;
+        Pstat = PlayerStat.instance;
+        InitStat();
     }
 
     void Awake()
@@ -35,7 +61,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector2 nextVec = inputVec.normalized * Pstat.Move_Speed * Rstat.Move_SpeedScale *Time.fixedDeltaTime;
+        Vector2 nextVec = inputVec.normalized * Pstat.Move_Speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
@@ -54,16 +80,15 @@ public class Player : MonoBehaviour
             return;
 
         int Edamage = collision.transform.GetComponent<Enemy>().Damage;
-        GameManager.instance.health -= Time.deltaTime * Edamage;
+        hp -= (int)Time.deltaTime * Edamage;
 
-        if(GameManager.instance.health <= 0)
+        if(hp <= 0.001)
         {
             for(int i=2; i<transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(false);
-                GameManager.instance.uiDead.Show();
             }
-
+            GameManager.instance.uiDead.Show();
             anim.SetTrigger("Dead");
         }
     }

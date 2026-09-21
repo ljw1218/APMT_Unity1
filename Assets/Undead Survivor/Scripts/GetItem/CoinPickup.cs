@@ -20,14 +20,14 @@ public class CoinPickup : MonoBehaviour
 
     public void OnPickedUp()
     {
-        GameManager.instance.GetExp(data.exp);
+        Player.instance.GetExp(data.exp);
         gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
-        GameManager.instance.GetExp(data.exp);
+        Player.instance.GetExp(data.exp);
         gameObject.SetActive(false);
     }
 
@@ -36,7 +36,7 @@ public class CoinPickup : MonoBehaviour
         if (isAttracting)
         {
             transform.position = Vector2.MoveTowards(transform.position,
-                GameManager.instance.player.transform.position, Define.AttractSpeed * Time.deltaTime);
+                Player.instance.transform.position, Define.AttractSpeed * Time.deltaTime);
         }
     }
 }
