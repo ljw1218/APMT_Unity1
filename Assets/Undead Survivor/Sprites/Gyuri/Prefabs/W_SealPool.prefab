@@ -46,5 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::W_SealPool
   Data: {fileID: 11400000, guid: 2fc74e3c4a374f244a64f390e68686ac, type: 2}
   sealPrefab: {fileID: -6109602210428813056, guid: 59eb4666dccff024cb6c92a86552ec7d, type: 3}
+  Active: {fileID: 11400000, guid: 3f079223206f9c94ba86ed10cac98eed, type: 2}
   spawnOffset: {x: 0.3, y: 0.5}
+  punchOffset: {x: 1.2, y: -0.3}
   launchKey: 304

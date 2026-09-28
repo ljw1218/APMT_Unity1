@@ -37,7 +37,7 @@ public class W_SealPool : Weapon
     protected override void Awake()
     {
         base.Awake();
-        LevelUp.AddItem(Active);
+        LevelUp.bActiveOn[Active] = true;
     }
     protected override IEnumerator AttackRoutine()
     {

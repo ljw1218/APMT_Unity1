@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: A_Seal
   m_EditorClassIdentifier: Assembly-CSharp::ActiveItemData
   itemId: 0
-  itemName: "\uBB3C\uBC94 \uD559\uC0B4\uC790"
-  itemDesc: "\uBB34\uC790\uBE44\uD55C \uBB3C\uBC94\uD559\uC0B4\uC790\uAC00 \uB418\uC5B4
-    \uBB3C\uBC94\uC744 \uC8FC\uBA39\uC73C\uB85C \uBC00\uC5B4 \uB0BC \uC218 \uC788\uAC8C
-    \uB41C\uB2E4. \uBB3C\uBC94\uC774 \uB5A0 \uC788\uB294 \uB3D9\uC548 \uC88CShift
-    \uC785\uB825 \uC2DC \uCEE4\uC11C \uBC29\uD5A5\uC73C\uB85C \uBC00\uC5B4\uB0B4\uBA70
-    \uACF5\uACA9\uD55C\uB2E4."
-  itemIcon: {fileID: 0}
+  itemName: "\uBB3C\uBC94\uD559\uC0B4\uC790"
+  itemDesc: "... \uBB3C\uBC94 \uBD88\uC30D\uD574\n\uBB3C\uBC94\uC774 \uB5A0 \uC788\uB294
+    \uB3D9\uC548 LShift \uC785\uB825 \uC2DC \uCEE4\uC11C \uBC29\uD5A5\uC73C\uB85C
+    \uBC00\uC5B4\uB0B4\uBA70 \uACF5\uACA9\uD55C\uB2E4. (\uCFE8\uD0C0\uC784 :  "
+  itemIcon: {fileID: 5163905418075854900, guid: 5c56b27c78db62449932e2d36dd07326, type: 3}
   maxLevel: 1
-  ActiveTarget: {fileID: -977759328822175472, guid: 8e872cec092ae3748806accc5deb86b5, type: 3}
+  ActiveTarget: {fileID: 11400000, guid: 2fc74e3c4a374f244a64f390e68686ac, type: 2}

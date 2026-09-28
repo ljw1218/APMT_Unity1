@@ -6,8 +6,9 @@ public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
     //Item[] items;
-    public static List<ItemData> ItemList;
-
+    public List<ItemData> ItemList; // 포션은 안넣어도 됨
+    public static Dictionary<ActiveItemData, bool> bActiveOn = new();
+    //아이템 띄울때 is activeItemData 해서 맞으면 bActiveon을 체크해서 true면 추가 아니면 pass
     public static Dictionary<ItemData, int> ItemDict = new();
 
     [SerializeField] private Item[] itemslot;
@@ -20,19 +21,20 @@ public class LevelUp : MonoBehaviour
         {
             if (data is WeaponItemData wdata && wdata.type == ItemData.WeaponType.Default)
             {
-                ItemDict[data] = 1;
+                ItemDict[data] = 0;
+                itemslot[0].SetItem(data, ItemDict[data]);
+                itemslot[0].OnClick();
             }
             else
+            {
+                if (data is ActiveItemData ad)
+                    bActiveOn[ad] = false;
                 ItemDict[data] = 0;
+            }
         }
         ItemDict[ItemPostion] = 0;
     }
 
-    public static void AddItem(ItemData data)
-    {
-        ItemList.Add(data);
-        ItemDict[data] = 0;
-    }
     public void Show()
     {
         Next();
@@ -64,6 +66,11 @@ public class LevelUp : MonoBehaviour
             if (ItemDict[ItemList[i]] == ItemList[i].maxLevel)
             {
                 continue;
+            }
+            else if (ItemList[i] is ActiveItemData ad)
+            {
+                if (bActiveOn[ad] == false)
+                    continue;
             }
             CopyList.Add(ItemList[i]);
         }
