@@ -20,6 +20,11 @@ public class WeaponManager : MonoBehaviour
     public void LevelUpWeapon(WeaponItemData data)
     {
         Weapon weapon = WeaponDict[data];
-        weapon.LevelUp();
+        weapon.ItemLevelUp();
+    }
+
+    public void SetActive(Weapon weapon)
+    {
+        weapon.SetActive();
     }
 }

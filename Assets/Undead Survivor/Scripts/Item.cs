@@ -61,7 +61,14 @@ public class Item : MonoBehaviour
     {
         level++;
 
-        RunTimeStat.instance.UpdateData(data, level);
+        RunTimeStat.instance.UpdateData(data, level-1);
+    }
+
+    public void SameActiveUpdate(ActiveItemData data)
+    {
+        level++;
+
+        WeaponManager.instance.SetActive(data.ActiveTarget);
     }
     public void OnClick()
     {
@@ -74,6 +81,11 @@ public class Item : MonoBehaviour
         {
             SamePassiveUpdate(passive);
         }
-        LevelUp.ItemDict[ItemData]++;
+        else if(ItemData is ActiveItemData active)
+        {
+            SameActiveUpdate(active);
+        }
+        if(level <= ItemData.maxLevel)
+            LevelUp.ItemDict[ItemData]++;
     }
 }

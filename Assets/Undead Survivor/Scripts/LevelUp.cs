@@ -6,7 +6,7 @@ public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
     //Item[] items;
-    public List<ItemData> ItemList;
+    public static List<ItemData> ItemList;
 
     public static Dictionary<ItemData, int> ItemDict = new();
 
@@ -25,8 +25,14 @@ public class LevelUp : MonoBehaviour
             else
                 ItemDict[data] = 0;
         }
+        ItemDict[ItemPostion] = 0;
     }
 
+    public static void AddItem(ItemData data)
+    {
+        ItemList.Add(data);
+        ItemDict[data] = 0;
+    }
     public void Show()
     {
         Next();

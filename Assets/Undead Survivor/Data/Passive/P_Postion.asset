@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: "\uD3EC\uC158"
   itemDesc: "\uD53C 15 \uD68C\uBCF5"
   itemIcon: {fileID: 9199324947690556375, guid: 5d2f632b73f9df341832b8972c2fa057, type: 3}
-  maxLevel: 3
+  maxLevel: 1
   type: 3
   value:
   - 15

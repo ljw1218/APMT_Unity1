@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Define
+public static class Define
 {
     public static class Scene
     {

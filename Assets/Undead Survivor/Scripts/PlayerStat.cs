@@ -15,6 +15,11 @@ public class PlayerStat : MonoBehaviour
     public float Critical_Dam { get; private set; }
     public float ItemGetRange { get; private set; }
     public int ExpTerm { get; private set; }
+
+    void Awake()
+    {
+        instance = this;
+    }
     public void Init()
     {
         RunStat = RunTimeStat.instance;

@@ -13,6 +13,7 @@ public class ItemData : ScriptableObject
     public enum WeaponType
     {
         Default,
+        General,
         Rotate,
     }
     [Header("# Main Info")]

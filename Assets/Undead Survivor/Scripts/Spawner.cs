@@ -21,6 +21,10 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnBossTimer());
+        for(int i=0; i<10; i++)
+        {
+            Spawn();
+        }
     }
     void Update()
     {
@@ -49,7 +53,7 @@ public class Spawner : MonoBehaviour
     }
     void Spawn()
     {
-        Vector3 spawnPos = GetSpawnPosition(AreaTransform.GetComponent<BoxCollider2D>(), 5f);
+        Vector3 spawnPos = GetSpawnPosition(AreaTransform.GetComponent<BoxCollider2D>(), 3f);
 
         GameObject enemy = GameManager.instance.pool.GetGM((int)Define.PoolType.Monster);
         enemy.transform.position = spawnPos;

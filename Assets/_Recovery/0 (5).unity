@@ -38512,8 +38512,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 600323446}
   - {fileID: 1906753214}
@@ -38571,7 +38571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   inputVec: {x: 0, y: 0}
-  scanner: {fileID: 510438945}
+  scanner: {fileID: 0}
   level: 0
   exp: 0
   hp: 0
@@ -60084,7 +60084,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d367d22b7766c0d4bb269081ccd828ae, type: 2}
   - {fileID: 11400000, guid: f2b7f360f300e1549805535206e20fdd, type: 2}
   - {fileID: 11400000, guid: 55af9bc6b117d9943860d1bb69c0ec55, type: 2}
-  - {fileID: 11400000, guid: 2fc74e3c4a374f244a64f390e68686ac, type: 2}
+  - {fileID: 11400000, guid: 933e3f6ace78df247bfd1572a12f6498, type: 2}
   itemslot:
   - {fileID: 1976061572}
   - {fileID: 1361287149}
@@ -79492,7 +79492,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 25, y: 25}
   m_EdgeRadius: 0
 --- !u!1 &1960163032
 GameObject:

@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     {
         isAttack = false;
         transform.localScale = Vector3.one;
-        level = 1;
+        level = 0;
         count = Data.baseCount;
     }
 
@@ -32,8 +32,9 @@ public class Weapon : MonoBehaviour
         Damage = Data.baseDamage * Rstat.DamageScale;
         AttackTerm = Data.attackTerm * (1 / Rstat.Attack_SpeedScale);
         AttackTime = 0;
+        StartCoroutine(Attack());
     }
-    public void LevelUp()
+    public void ItemLevelUp()
     {
         level++;
         UpdateData();
@@ -66,5 +67,10 @@ public class Weapon : MonoBehaviour
     protected virtual IEnumerator AttackRoutine()
     {
         yield return null;
+    }
+
+    public virtual void SetActive()
+    {
+        return;
     }
 }

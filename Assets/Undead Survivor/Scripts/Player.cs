@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
-        
+        instance = this;
     }
     void Update()
     {

@@ -89,6 +89,10 @@ public class W_JNGPool : Weapon
     //    InActive++;
     //    Arrange();
     //}
+    protected override void Update()
+    {
+        return;
+    }
     private void Recovery()
     {
         int index = QInactive.Dequeue();

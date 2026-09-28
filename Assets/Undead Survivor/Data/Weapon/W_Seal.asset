@@ -12,18 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d9753f2cca13b42ace8a5c158499ec, type: 3}
   m_Name: W_Seal
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItemData
-  itemId: 1
-  itemName: "\uC7A5\uB09C\uAC10"
-  itemDesc: "\uC7A5\uB09C\uAC10\uC774 \uD68C\uC804\uD558\uBA70 (15 / 30 / 50)\uC758
-    \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4.\n20\uD68C \uACF5\uACA9\uC2DC \uC0AC\uB77C\uC9C0\uBA70
-    15\uCD08\uB9C8\uB2E4 \uD558\uB098\uC529 \uC7AC\uC0DD\uB41C\uB2E4.\n\uCD5C\uB300
-    (2 / 3 / 5)\uC758 \uC7A5\uB09C\uAC10\uC774 \uC720\uC9C0 \uB420 \uC218 \uC788\uB2E4."
-  itemIcon: {fileID: 21300000, guid: f0ea2717c45b93a45a3e3c317b219b86, type: 3}
+  itemId: 2
+  itemName: "\uBB3C\uBC94 \uCFE0\uC158"
+  itemDesc: "\uADF9\uC545\uBB34\uB3C4\uD55C \uC0AC\uB78C\uC774 \uC544\uB2C8\uB77C\uBA74
+    \uB54C\uB9B4 \uC218 \uC5C6\uC744 \uADC0\uC5EC\uC6B4 \uBB3C\uBC94\uC528.\n\uB0A0\uC544\uC62C\uB77C
+    \uB5A8\uC5B4\uC9C0\uBA70 (30 / 50 / 80)\uC758 \uD53C\uD574\uB97C \uC785\uD78C\uB2E4."
+  itemIcon: {fileID: 21300000, guid: 5331d10eb1de9734da9c2c2d77cf3617, type: 3}
   maxLevel: 3
   type: 1
-  attackTerm: 0
-  baseDamage: 15
-  baseCount: 2
-  damages: 0f0000001e00000032000000
-  counts: 020000000300000005000000
-  Target: {fileID: 8430841517586537168, guid: b0c2ff408e5b87d49aeeeaa8804b500e, type: 3}
+  attackTerm: 5
+  baseDamage: 30
+  baseCount: 1
+  damages: 1e0000003200000050000000
+  counts: 01000000
+  Target: {fileID: 8430841517586537168, guid: 8e872cec092ae3748806accc5deb86b5, type: 3}

@@ -20,7 +20,7 @@ MonoBehaviour:
     (2 / 3 / 5)\uC758 \uC7A5\uB09C\uAC10\uC774 \uC720\uC9C0 \uB420 \uC218 \uC788\uB2E4."
   itemIcon: {fileID: 21300000, guid: f0ea2717c45b93a45a3e3c317b219b86, type: 3}
   maxLevel: 3
-  type: 1
+  type: 2
   attackTerm: 0
   baseDamage: 15
   baseCount: 2
