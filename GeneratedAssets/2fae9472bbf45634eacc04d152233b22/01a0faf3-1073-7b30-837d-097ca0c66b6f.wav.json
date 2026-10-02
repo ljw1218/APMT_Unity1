@@ -1,0 +1,15 @@
+{
+    "asset": "2fae9472bbf45634eacc04d152233b22",
+    "fileName": "01a0faf3-1073-7b30-837d-097ca0c66b6f.wav",
+    "prompt": "A short cute UI button click sound, soft bubbly pop, high pitched, playful and light, clean with no reverb, under 0.5 seconds. loud and clear, mid-range frequency, audible on small speakers, mono",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

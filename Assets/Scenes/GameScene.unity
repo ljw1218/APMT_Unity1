@@ -69569,7 +69569,6 @@ MonoBehaviour:
   bisLive: 0
   bGameLive: 1
   gameTime: 0
-  maxGameTime: 20
   nBossSpawnTime: 40
   bisClear: 0
 --- !u!114 &1448091230

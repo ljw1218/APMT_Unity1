@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     [Header("# Game Control")]
     public bool bGameLive;
     public float gameTime;
-    public float maxGameTime = 2 * 10f;
     public int nBossSpawnTime;
     public bool bisClear;
 

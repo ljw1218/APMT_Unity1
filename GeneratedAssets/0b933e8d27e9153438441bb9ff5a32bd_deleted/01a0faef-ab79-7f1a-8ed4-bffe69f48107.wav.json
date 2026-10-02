@@ -1,0 +1,15 @@
+{
+    "asset": "0b933e8d27e9153438441bb9ff5a32bd",
+    "fileName": "01a0faef-ab79-7f1a-8ed4-bffe69f48107.wav",
+    "prompt": "A cute soft squishy button tap sound, like pressing a small rubber toy, gentle and bouncy, dry and clean, under 0.4 seconds",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": "Adam"
+}

@@ -1,0 +1,44 @@
+{
+    "asset": "20aadffec69483e45950cd5590295e05",
+    "fileName": "01a0fb2d-230d-7cef-8b25-b5526559c02e.png",
+    "prompt": "A wide horizontal game menu button, empty with no text, simple rounded rectangle with softly rounded corners, flat 2D vector style, front view, minimal flat shading, no gloss, no seam, no dividing line, soft pastel orange fill #FFA53D, lighter cream band on the top edge #FFF3DC, thin darker orange outline #F28A1E, small soft shadow below, cute casual mobile game UI, clean edges, centered, isolated on a solid pure white background, no gradient, no texture",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 384
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "high"
+            },
+            {
+                "key": "quality",
+                "value": "high"
+            },
+            {
+                "key": "background",
+                "value": "auto"
+            }
+        ]
+    }
+}

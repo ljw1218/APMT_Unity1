@@ -13,20 +13,6 @@ public class Item : MonoBehaviour
     private ItemData ItemData;
     private int level;
 
-    void Awake()
-    {
-        Init();
-    }
-    void Init()
-    {
-        
-    }
-
-    void LateUpdate()
-    {
-        
-    }
-
     public void SetItem(ItemData data,int nlevel)
     {
         ItemData = data;
