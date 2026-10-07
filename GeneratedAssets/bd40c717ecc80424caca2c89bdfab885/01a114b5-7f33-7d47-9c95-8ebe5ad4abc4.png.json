@@ -1,0 +1,54 @@
+{
+    "asset": "bd40c717ecc80424caca2c89bdfab885",
+    "fileName": "01a114b5-7f33-7d47-9c95-8ebe5ad4abc4.png",
+    "prompt": "Main menu title screen background for a cute casual 2D game, 1920x1080, 16:9.\r\nFlat vector illustration with soft gradients, clean anime-game UI art style, bright and cheerful.\r\nTangerine / mandarin orange theme: warm palette of tangerine orange, soft yellow, cream white, with fresh leaf-green accents.\r\nLeft side: a huge, semi-transparent tangerine slice silhouette partially cut off by the left edge, subtle and faded into the background like a watermark motif.\r\nScattered four-pointed sparkle stars in white, pale yellow and light orange across the upper area.\r\nSoft glowing bokeh circles and floating bubbles near the bottom, slightly blurred.\r\nA few small tangerines with green leaves and tiny citrus slices floating softly in the mid-ground, not too busy.\r\nRight side: a lighter, calm vertical area with a soft pale-cream translucent panel, kept mostly empty for a logo and menu buttons.\r\nRounded decorative frame border around the whole screen in deeper orange with a soft inner glow.\r\nBackground gradient from light",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "67f3416d3751a5f4d8bdbcd9a903e997",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "low"
+            },
+            {
+                "key": "quality",
+                "value": "high"
+            },
+            {
+                "key": "background",
+                "value": "opaque"
+            }
+        ]
+    }
+}

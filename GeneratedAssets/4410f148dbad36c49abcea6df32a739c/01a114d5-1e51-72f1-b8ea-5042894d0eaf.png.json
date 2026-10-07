@@ -1,0 +1,54 @@
+{
+    "asset": "8149a4b6b414d5c40b22b9ce57731769",
+    "fileName": "01a114d5-1e51-72f1-b8ea-5042894d0eaf.png",
+    "prompt": "Cute casual game title logo, Korean text \"장난감의 난\" in one horizontal line.\r\n\"의\" is noticeably smaller, \"난\" is the largest and slightly tilted for emphasis.\r\nChunky rounded bold lettering, bubbly and playful, toy-like feel.\r\nUse the reference image only for its color palette and sparkle style, so the logo matches that background. Do not copy its composition or background elements.\r\nLetters filled with tangerine orange to soft yellow gradient, thick deep-orange outline plus a thick outer white outline, soft darker drop shadow underneath, so the text stands out clearly on a warm cream-orange background.\r\nGlossy highlight on top of the letters like a fresh fruit surface.\r\nDecorations: a small tangerine with two green leaves sitting on top of \"난\", a tangerine slice icon near the first letter, a few four-pointed sparkle stars in white and pale yellow around the text.\r\nFlat vector style, clean edges, mobile/anime game logo style.\r\nIsolated on a plain solid white background, centered, wide horizontal composition, no b",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "403a91690f9feee4b9cc47ce6d5c8261",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "low"
+            },
+            {
+                "key": "quality",
+                "value": "high"
+            },
+            {
+                "key": "background",
+                "value": "opaque"
+            }
+        ]
+    }
+}
