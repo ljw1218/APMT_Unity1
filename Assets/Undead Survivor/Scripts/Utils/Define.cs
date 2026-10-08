@@ -22,9 +22,7 @@ public static class Define
 
     public enum PoolType
     {
-        Monster = 0,
-        Shovel,
-        Bullet,
-        Coin,
+        Coin = 0,
+        Monster,
     }
 }

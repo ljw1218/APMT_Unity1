@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class W_JNGPool : Weapon
+public class W_PuffPool : Weapon
 {
-    [SerializeField] private W_JNG JNGPrefab;
+    [SerializeField] private W_Puff JNGPrefab;
     [SerializeField] private float radius = 1.5f;
     [SerializeField] private float RotateSpeed = 180f;
-    private List<W_JNG> JNGs = new();
+    private List<W_Puff> JNGs = new();
     private int AttackLimit = 20;
     private int RecoveryTime = 15;
     private Queue<int> QInactive = new();
@@ -28,7 +28,7 @@ public class W_JNGPool : Weapon
     {
         for(int i=0; i<count; i++)
         {
-            W_JNG JNG = Instantiate(JNGPrefab);
+            W_Puff JNG = Instantiate(JNGPrefab);
             JNG.transform.SetParent(transform,false);
             JNGs.Add(JNG);
             JNGs[i].InitJNG(this, AttackLimit);
@@ -47,7 +47,7 @@ public class W_JNGPool : Weapon
     {
         for (int i = 0; i < ToAdd; i++)
         {
-            W_JNG JNG = Instantiate(JNGPrefab);
+            W_Puff JNG = Instantiate(JNGPrefab);
             JNG.transform.SetParent(transform, false);
             JNGs.Add(JNG);
             JNGs[JNGs.Count - 1].InitJNG(this, AttackLimit);

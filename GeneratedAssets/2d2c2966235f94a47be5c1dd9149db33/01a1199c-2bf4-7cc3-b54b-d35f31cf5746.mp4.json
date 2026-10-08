@@ -1,0 +1,41 @@
+{
+    "asset": "2d2c2966235f94a47be5c1dd9149db33",
+    "fileName": "01a1199c-2bf4-7cc3-b54b-d35f31cf5746.mp4",
+    "prompt": "Cute pixel art chibi blob monster walking in place, walk cycle animation.\r\nThe walking starts immediately from the very first frame and continues the whole time.\r\nIt waddles with its short stubby feet stepping alternately while its round body bounces slightly up and down.\r\nIts eyes are plain solid white circles with dark brown outlines and no pupils. The eyes stay exactly the same in every frame: never blinking, never closing, never changing shape.\r\nThe facial expression stays exactly the same in every frame.\r\nThe character keeps exactly the same viewing angle and facing direction as the input image and never turns its body or head.\r\nStatic camera, fixed framing, the character stays centered and does not move across the frame.\r\nSeamless looping motion.\r\nKeep exactly the same pixel art style, colors, outline, face and character design as the input image.\r\nPlain solid flat background that stays unchanged.\nCalm, cheerful, steady waddle, the leaves on its head bob gently.",
+    "negativePrompt": "pupils, black eyes, eyeballs, irises, blinking, closed eyes, squinting, eye change, expression change, smiling change, turning around, rotating, side view turn, standing still, idle pause, blurry, messy pixels, jpeg artifacts, camera movement, zoom, panning, character moving across the frame, background change, character design change, morphing, extra limbs, shadows, text, watermark",
+    "model": "video-kling-v3-i2v-standard",
+    "modelName": "Kling V3 I2V Standard",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Spritesheet",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 9,
+                "doodle": [],
+                "label": "First",
+                "strength": 1.0,
+                "invertStrength": false,
+                "assetReferenceGuid": "4ac562d18b4027840a384d4dcd6fd427",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 0,
+        "height": 0
+    },
+    "spriteSheet": true,
+    "duration": 3.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

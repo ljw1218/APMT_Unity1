@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3389765721709396539}
   - component: {fileID: 1803880514757180098}
-  - component: {fileID: 3045902511434657371}
   - component: {fileID: 7586636733285764101}
+  - component: {fileID: 7172808525901359853}
   m_Layer: 8
-  m_Name: W_JNG
+  m_Name: W_Puff
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,18 +83,31 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: f0ea2717c45b93a45a3e3c317b219b86, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}
+  m_Sprite: {fileID: 21300000, guid: e27c1ba65ef2d0f49ad75307a911b9e3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3888889, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &3045902511434657371
-BoxCollider2D:
+--- !u!114 &7586636733285764101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543106310515880239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4098e3652fdb10c49affd02448834112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::W_JNG
+  isAlive: 0
+--- !u!58 &7172808525901359853
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,32 +140,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.02}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.3888889, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.78, y: 0.74}
-  m_EdgeRadius: 0
---- !u!114 &7586636733285764101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543106310515880239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4098e3652fdb10c49affd02448834112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::W_JNG
-  Data: {fileID: 0}
-  JNGPrefab: {fileID: 0}
-  radius: 2
-  RotateSpeed: 180
-  isAlive: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.4

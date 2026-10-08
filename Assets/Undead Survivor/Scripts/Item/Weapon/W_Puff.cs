@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class W_JNG : MonoBehaviour
+public class W_Puff : MonoBehaviour
 {
     public int RemainHit {  get; private set; }
-    private W_JNGPool owner;
+    private W_PuffPool owner;
     public bool isAlive;
 
-    public void InitJNG(W_JNGPool owner,int Limit)
+    public void InitJNG(W_PuffPool owner,int Limit)
     {
         this.owner = owner;
         RemainHit = Limit;

@@ -1,0 +1,54 @@
+{
+    "asset": "e723316a535f82d44b5482ef8cf1669d",
+    "fileName": "01a11922-73ca-7111-9f07-cd8c0baf0863.png",
+    "prompt": "Pixel art game sprite, 48x48 pixels, limited palette of about 14 colors, clean hard-edged pixels.\r\nA cute monster character based on the character reference: a round orange blob-shaped creature with two green leaves growing from the top of its head, now cross-dressed in a cute girly outfit.\r\nGirly details: a big pink ribbon bow on top of its head between the two leaves, long eyelashes, small pink lips, light pink blush, and a frilly pink skirt with a white lace hem around the lower half of its round body.\r\nFace: solid white round eyes completely filled with pure white and outlined in dark brown, with long eyelashes, a shy cute smile.\r\nPose: standing on two short, round, stubby feet peeking out under the skirt, small stubby arms, slightly bashful.\r\nIt keeps its round blob body with chibi mascot proportions, exactly the same body shape, size and pixel style as the character reference.\r\nFacing right, three-quarter side view, a single character.\r\nFlat matte colors with simple two-tone cel shading, every color are",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "4ac562d18b4027840a384d4dcd6fd427",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "high"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

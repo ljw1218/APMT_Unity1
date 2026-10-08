@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2674670954170483622}
   - component: {fileID: 3479707591500001553}
   m_Layer: 0
-  m_Name: W_JNGPool
+  m_Name: W_PuffPool
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
