@@ -1,0 +1,50 @@
+{
+    "asset": "c925f7cfdd9b76a4ab056ddaefebd1f2",
+    "fileName": "01a12535-4758-7942-87c6-b2142f6f5e2f.mp4",
+    "prompt": "Pixel art sprite sheet of the same character as the reference image, running animation cycle, 8 frames in a single horizontal row, side view facing right.\r\n\r\nKeep the character design exactly identical to the reference in every frame: same chibi proportions, same face, same long pink-beige twin tails with green ribbons, same orange oversized jacket, white top, brown skirt, orange knee-high socks and brown loafers. Same colors, same dark reddish-brown outline, same pixel resolution and art style as the reference.\r\n\r\nSmooth looping run cycle with contact, down, passing and up poses for each leg. Arms swing opposite to the legs, jacket and twin tails bounce and trail slightly behind with the motion, body bobs gently up and down across frames.\r\n\r\nEvery frame is the same size, character centered with consistent scale and a shared ground line, evenly spaced with clear empty space between frames. Transparent background, crisp hard-edged pixels, flat shading with simple light from the upper left.",
+    "negativePrompt": "text, letters, numbers, frame numbers, watermark, signature, grid lines, borders, background scenery, ground shadow, extra objects, extra characters, duplicate character in one frame, overlapping frames, cropped character, inconsistent size, inconsistent proportions, different outfit, different hair color, extra limbs, missing limbs, deformed hands, blurry, anti-aliasing, soft edges, smooth gradients, painterly, realistic, 3D render, high detail, noise, jpeg artifacts",
+    "model": "video-kling-v3-i2v-standard",
+    "modelName": "Kling V3 I2V Standard",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Spritesheet",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 9,
+                "doodle": [],
+                "label": "First",
+                "strength": 1.0,
+                "invertStrength": false,
+                "assetReferenceGuid": "79f2fa64e145841478ddcd7e79bc794f",
+                "unlabeledIndex": -1
+            },
+            {
+                "doodleReferenceType": 10,
+                "doodle": [],
+                "label": "Last",
+                "strength": 1.0,
+                "invertStrength": false,
+                "assetReferenceGuid": "79f2fa64e145841478ddcd7e79bc794f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 0,
+        "height": 0
+    },
+    "spriteSheet": true,
+    "duration": 3.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
