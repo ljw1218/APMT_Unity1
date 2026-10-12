@@ -1,0 +1,54 @@
+{
+    "asset": "22f34827a3abc544480e90a67941e922",
+    "fileName": "01a12f07-8608-7655-a79c-3c469d319028.png",
+    "prompt": "48x48 pixel art game sprite, hit-flash frame of a small round chibi orange fruit creature, exact same pose, shape, and silhouette as the reference image, facing right in a 3/4 side view, full body centered with minimal space below the feet, solid flat magenta background (#FF00FF).\r\n\r\nHit flash style: the whole character is washed out and bleached toward white, as if flashing from being struck. Every color becomes a very pale pastel tint of its original color: the round orange body becomes pale peach-cream, the pink bow and frilly pink skirt become very pale pink, the skirt's frill trim becomes pure white, the green leaf becomes pale mint green, the little orange feet become pale peach. Flat matte fills with only a faint two-tone cel shading, almost no contrast inside the shapes.\r\n\r\nOutline: 1-pixel outline shifted to a soft reddish brown, slightly brighter than normal so the silhouette stays readable against the pale fills.\r\n\r\nFace: the same face as the reference. Two round eyes with pure white centers and a ",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "b8eb5d271d2ce83419b2405baaea5581",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "high"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

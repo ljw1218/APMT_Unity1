@@ -1,0 +1,54 @@
+{
+    "asset": "c18d3d1bfa6a2d641b578f4dfa8f3d10",
+    "fileName": "01a12d78-63a7-789f-b17b-ef4471bbd846.png",
+    "prompt": "Pixel art game sprite, 48x48 pixels, limited palette of about 12 colors, clean hard-edged pixels.\r\nThe same cute monster as the character reference: a round orange blob-shaped creature with two red devil horns on top of its head, knocked out and lying face-down.\r\nPose: collapsed flat on its belly, round body squashed wide and flat like a soft mochi, head turned to the side resting on the ground, two short stubby feet sticking out behind it, small arms spread out limply.\r\nThe two red horns tilt to the side.\r\nA tiny pixel dizzy swirl floats just above its head.\r\nColors slightly faded and pale, as if all its energy is gone, horns in a muted red.\r\nSame outline and pixel style as the character reference.\r\nFlat matte colors with simple two-tone cel shading, every color area is a solid flat fill.\r\nCrisp 1-pixel dark brown outline.\r\nWhole body fully visible, centered, lying ",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "0934adb26106c954dbceecaa1c2e6d5a",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "low"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

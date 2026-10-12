@@ -1,0 +1,41 @@
+{
+    "asset": "030be0b242de9b34eab256fb14bd4788",
+    "fileName": "01a12f0c-8c41-7bb8-ac4f-4359d6ea7203.mp4",
+    "prompt": "pixel art sprite sheet, run cycle animation of a small round chibi orange fruit creature, 6 frames arranged in a single horizontal row, each frame 48x48 pixels, same character size and same ground line in every frame, character facing right in a 3/4 side view, full body visible in every frame, solid flat magenta background (#FF00FF).\r\n\r\nStyle: limited 12-color palette, matte flat colors with simple two-tone cel shading, 1-pixel dark brown outline, slightly desaturated colors.\r\n\r\nCharacter: round bright orange body, one green leaf on the upper left of the head, a pink ribbon bow on top of the head, frilly pink skirt with a pure white ruffled trim around the lower body, small stubby arm, two short stubby orange feet, faint pink blush dots on the cheeks. Two round eyes with pure white centers and a thin dark outline, the white eye centers clearly visible.\r\n\r\nMotion: a fast charging dash, the body leaning strongly forward to the right, short determined slanted eyebrows and a small tight mouth. The two stubby feet",
+    "negativePrompt": "standing still, idle pose, walking slowly, facing left, front view, back view, different character size between frames, misaligned frames, cropped body, extra limbs, extra eyes, missing eyes, dark eyes, speed lines, motion blur, dust clouds, glow, sparkles, gradients, shiny highlights, soft shading, anti-aliasing, blurry, drop shadow, ground shadow, background scenery, white background, text, numbers, frame borders, grid lines, watermark",
+    "model": "video-kling-v3-i2v-standard",
+    "modelName": "Kling V3 I2V Standard",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Spritesheet",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 9,
+                "doodle": [],
+                "label": "First",
+                "strength": 1.0,
+                "invertStrength": false,
+                "assetReferenceGuid": "b8eb5d271d2ce83419b2405baaea5581",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 0,
+        "height": 0
+    },
+    "spriteSheet": true,
+    "duration": 3.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -38492,12 +38492,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3781910019033479378, guid: 5e05b81e64188a84c9153638b90998b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e05b81e64188a84c9153638b90998b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.24, y: 1.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -38512,7 +38512,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 600323446}
@@ -38555,8 +38555,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02, y: 0}
-  m_Size: {x: 0.64, y: 0.8}
+  m_Offset: {x: 0.02, y: -0.03}
+  m_Size: {x: 0.64, y: 1.05}
   m_Direction: 0
 --- !u!114 &510438942
 MonoBehaviour:
@@ -38572,6 +38572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   inputVec: {x: 0, y: 0}
   scanner: {fileID: 510438945}
+  AreaColl: {fileID: 1906753215}
   level: 0
   exp: 0
   hp: 0
@@ -38766,7 +38767,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 36.175972
+  orthographic size: 6.9166665
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -59673,8 +59674,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
   prefabs:
   - {fileID: 1138163325733769138, guid: 3cffdba1ac7a1a64896112f035181282, type: 3}
+  - {fileID: 2167343188388903709, guid: b23329266c20ab34b98d045821d3756a, type: 3}
   - {fileID: 6333144802923818195, guid: eed2c97ef5ad32846896dd5619515655, type: 3}
   - {fileID: 7804967187985383066, guid: 6c14ea34910b39d4cbf72794a626d966, type: 3}
+  - {fileID: 3782044810738137857, guid: c718dc4dc0f18f54fa805705ba0fe44f, type: 3}
 --- !u!1 &1354721858
 GameObject:
   m_ObjectHideFlags: 0
@@ -79049,6 +79052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644089383}
   - component: {fileID: 1644089384}
+  - component: {fileID: 1644089385}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -79083,12 +79087,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d3f823139c8d0429c996c298a5c28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  spawnData:
+  waveData: {fileID: 11400000, guid: c7171c7201ddb084a8367e3669a91fdd, type: 2}
+  monsterData:
+  - {fileID: 11400000, guid: da0490620771a174b8529f4f61017fb8, type: 2}
   - {fileID: 11400000, guid: c2c86a9b681fc084bb11524e942f5178, type: 2}
   - {fileID: 11400000, guid: 70f2d6c47b9d37340bbdcdb5c6a5e090, type: 2}
-  - {fileID: 11400000, guid: ec143bb47ee604347bb172229cfd711a, type: 2}
-  - {fileID: 11400000, guid: da0490620771a174b8529f4f61017fb8, type: 2}
-  - {fileID: 11400000, guid: 6bed2a246a968bc4d8640417a42de9a5, type: 2}
+--- !u!114 &1644089385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644089382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e7dd4c945355c4d8414fc54c70138d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwarmSpanwer
+  data: {fileID: 11400000, guid: ec143bb47ee604347bb172229cfd711a, type: 2}
+  clusterRadius: 1
+  firstDelay: 5
+  count: 12
 --- !u!1 &1720275882
 GameObject:
   m_ObjectHideFlags: 0

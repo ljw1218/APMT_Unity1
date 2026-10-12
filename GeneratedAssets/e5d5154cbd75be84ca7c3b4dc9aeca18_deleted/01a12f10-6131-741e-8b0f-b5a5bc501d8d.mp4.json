@@ -1,0 +1,41 @@
+{
+    "asset": "e5d5154cbd75be84ca7c3b4dc9aeca18",
+    "fileName": "01a12f10-6131-741e-8b0f-b5a5bc501d8d.mp4",
+    "prompt": "pixel art sprite sheet, 4 frames arranged in a single horizontal row, each frame 48x48 pixels, solid flat magenta background (#FF00FF).\r\n\r\nEvery frame is an exact copy of the reference character: same pose, same facing direction, same face, same colors, same size, same position. The head, face, eyes, leaf, bow, body, arm, and skirt are completely frozen and identical in all 4 frames, pixel for pixel.\r\n\r\nThe only thing that changes between frames is the two short stubby feet under the skirt, doing a quick small running step: frame 1 left foot forward, frame 2 both feet together, frame 3 right foot forward, frame 4 both feet together. Looping cycle.\r\n\r\nStyle: matte flat colors with simple two-tone cel shading, 1-pixel dark brown outline, same palette as the reference. The white eye centers and the white skirt trim stay pure white.",
+    "negativePrompt": "changing face, new eyes, extra eyes, different eyes, eyebrows changing, new expression, turning, side view, different facing direction, leaning, tilting, body bobbing, moving arm, moving leaf, moving bow, fluttering skirt, different size between frames, misaligned frames, extra limbs, speed lines, motion blur, dust, glow, sparkles, gradients, shiny highlights, shadow, background scenery, white background, text, frame borders, grid lines",
+    "model": "video-kling-v3-i2v-standard",
+    "modelName": "Kling V3 I2V Standard",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Spritesheet",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 9,
+                "doodle": [],
+                "label": "First",
+                "strength": 1.0,
+                "invertStrength": false,
+                "assetReferenceGuid": "b8eb5d271d2ce83419b2405baaea5581",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 0,
+        "height": 0
+    },
+    "spriteSheet": true,
+    "duration": 3.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

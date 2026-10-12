@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     PlayerStat Pstat;
     public Scanner scanner;
     Rigidbody2D rigid;
+    public BoxCollider2D AreaColl;
     SpriteRenderer spriter;
 
     public int level,exp;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
         Rstat = RunTimeStat.instance;
         Pstat = PlayerStat.instance;
         InitStat();
+        AreaColl = GameObject.FindGameObjectWithTag("Area").transform.GetComponent<BoxCollider2D>();
     }
 
     void Awake()

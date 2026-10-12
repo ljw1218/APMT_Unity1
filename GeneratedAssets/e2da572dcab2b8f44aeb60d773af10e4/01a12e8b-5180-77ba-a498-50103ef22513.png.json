@@ -1,0 +1,54 @@
+{
+    "asset": "e2da572dcab2b8f44aeb60d773af10e4",
+    "fileName": "01a12e8b-5180-77ba-a498-50103ef22513.png",
+    "prompt": "48x48 pixel art game sprite, death pose of a chibi SD girl, limited 12-color palette, matte flat colors with simple two-tone cel shading only, 1-pixel dark brown outline, slightly desaturated colors, solid flat magenta background (#FF00FF).\r\n\r\nPose: the girl has collapsed and is lying face-down flat on the ground, body stretched horizontally with her head on the right side of the frame and feet on the left, seen from a 3/4 side view. Her cheek rests on the ground with her face turned toward the viewer, both eyes squeezed shut drawn as simple curved lines, small dizzy mouth. One arm stretched forward past her head, the other arm limp beside her body, legs lying flat. The whole body lies low in the frame, centered horizontally, with minimal empty space below.\r\n\r\nCharacter details: long pale cream-beige hair with straight blunt bangs and one small ahoge strand, low twin tails tied with green ribbons spread out on the ground, cream beret with a green band slightly tilted on her head, round orange-slice hair clip ",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "09a21236ddddb9a408203321c3c33b03",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "low"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

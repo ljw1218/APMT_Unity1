@@ -5,12 +5,14 @@ using System.Collections.Generic;
 
 public class PoolManager : MonoBehaviour
 {
+    public static PoolManager instance;
     public GameObject[] prefabs;
     
     List<GameObject>[] pools;
 
     void Awake()
     {
+        instance = this;
         pools = new List<GameObject>[prefabs.Length];
 
         for (int i = 0; i < pools.Length; i++)

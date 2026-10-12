@@ -16,13 +16,13 @@ public class MonsterData : ScriptableObject
     public bool isBoss;
     public int spriteType;
     public SpawnPatternType patternType;
+    public int weight;
 
     [Header("Stat")]
     public float spawnTime;
     public int MaxHealth;
     public float Speed;
     public int Damage;
-    public int count;
 
     [Header("Reward")]
     public CoinData Coin;

@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: bd66d97578b6f764cbe413244031f87e
+labels:
+- UnityAI
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6927901365328861770
+    second: toy_leaf_walk_sheet_eyesfixed_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 800
+        width: 156
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b521a0f9662bdf90800000000000000
+      internalID: -6927901365328861770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 800
+        width: 166
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8923294c727ac83409b7ab3f4b5753bd
+      internalID: -2125015533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 802
+        width: 158
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8aa1110fd65eee4a8a0abc36ea0f46c
+      internalID: 1548856392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_3
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 801
+        width: 144
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4677397ab33beed4a9f5804e83256134
+      internalID: 1962761117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 544
+        width: 166
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c425d1c5b5bea444589187b6d8ec1aee
+      internalID: -952378677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 544
+        width: 171
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e04bd9a2f2de84fbec37fb9198c262
+      internalID: 416912276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_6
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 544
+        width: 172
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d790681d0fad3174c8bbd61f182d19af
+      internalID: -1156910012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 544
+        width: 169
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973fd4f838eeaa546a462ed11e9add80
+      internalID: -1363328951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 288
+        width: 151
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0e6be5878f959488204ab5fdec289d
+      internalID: 344571042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 288
+        width: 153
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f5c854cef487347bb44975f957eeaf
+      internalID: 2038717599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_10
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 290
+        width: 174
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130c014252e331847a5c79bfa84e19cf
+      internalID: 591782361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_11
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 288
+        width: 172
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78df2b661a93744896147069bfb76f2
+      internalID: 1413948849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 167
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c114c30d1f3c57d4ebfd25e521e307c7
+      internalID: 98583433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_13
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 34
+        width: 157
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66370c4c68e0b1c4187c8388fbff1282
+      internalID: 7487050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_14
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 32
+        width: 147
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74486858076c9e24b95e6c8a0c69a41c
+      internalID: 2021476644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toy_leaf_walk_sheet_eyesfixed_15
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 33
+        width: 174
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedf665c8251c2540877f36f1ea7f145
+      internalID: -1411667051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 59553e34374c0f44eb84180170719999
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      toy_leaf_walk_sheet_eyesfixed_0: -6927901365328861770
+      toy_leaf_walk_sheet_eyesfixed_1: -2125015533
+      toy_leaf_walk_sheet_eyesfixed_10: 591782361
+      toy_leaf_walk_sheet_eyesfixed_11: 1413948849
+      toy_leaf_walk_sheet_eyesfixed_12: 98583433
+      toy_leaf_walk_sheet_eyesfixed_13: 7487050
+      toy_leaf_walk_sheet_eyesfixed_14: 2021476644
+      toy_leaf_walk_sheet_eyesfixed_15: -1411667051
+      toy_leaf_walk_sheet_eyesfixed_2: 1548856392
+      toy_leaf_walk_sheet_eyesfixed_3: 1962761117
+      toy_leaf_walk_sheet_eyesfixed_4: -952378677
+      toy_leaf_walk_sheet_eyesfixed_5: 416912276
+      toy_leaf_walk_sheet_eyesfixed_6: -1156910012
+      toy_leaf_walk_sheet_eyesfixed_7: -1363328951
+      toy_leaf_walk_sheet_eyesfixed_8: 344571042
+      toy_leaf_walk_sheet_eyesfixed_9: 2038717599
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -47,4 +47,17 @@ public static class HitGeometry
         return Vector2.Angle(forward, toTarget) <= angle * 0.5f;
         //중심선 기준으로 좌우이므로 0.5
     }
+
+    public static Vector3 GetSpawnPosition(BoxCollider2D AreaColl, float margin)
+    {
+        Vector3 offset = Vector3.zero;
+
+        Bounds bounds = AreaColl.bounds;
+        float dist = bounds.extents.x + margin;
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+
+        offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f) * dist;
+
+        return (Vector3)bounds.center + offset;
+    }
 }
