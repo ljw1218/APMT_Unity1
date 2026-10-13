@@ -1,25 +1,22 @@
 using Unity.VectorGraphics;
 using UnityEngine;
 
-public class SwarmEnemy : MonoBehaviour
+public class SwarmEnemy : Enemy
 {
     [SerializeField] private float maxLifeTime = 12f;
     public bool isRushing {  get; private set; }
     private Vector2 dir;
-    private float speed;
     private bool enteredScreen;
     private float timer;
     private float margin = 0.15f;
 
-    private Rigidbody2D rigid;
     Camera cam;
 
-    private void Awake()
+    protected override void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
+        base.Awake();
         cam = Camera.main;
     }
-
     public void StartRush(Vector2 dir,float rushSpeed)
     {
         this.dir = dir;
@@ -38,7 +35,11 @@ public class SwarmEnemy : MonoBehaviour
         rigid.MovePosition(rigid.position + dir * speed * Time.fixedDeltaTime);
         rigid.linearVelocity = Vector2.zero;
     }
-
+    private void LateUpdate()
+    {
+        return;
+    }
+    
     private void Update()
     {
         if (!isRushing)
@@ -57,6 +58,22 @@ public class SwarmEnemy : MonoBehaviour
         bool farOut = vp.x < -1 * margin || vp.x > 1 + margin || vp.y < -1 * margin || vp.y > 1 + margin;
         if ((enteredScreen && farOut) || timer > maxLifeTime)
             Despawn();
+    }
+
+    public override void HitAction(int rDamage)
+    {
+        health -= rDamage;
+
+        if (health <= 0)
+        {
+            bIsLive = false;
+            coll.enabled = false;
+            rigid.simulated = false;
+            spriter.sortingOrder = 1;
+            anim.SetBool("Dead", true);
+            //GameManager.instance.kill++;
+            //GameManager.instance.GetExp(coindata);
+        }
     }
 
     private void Despawn()

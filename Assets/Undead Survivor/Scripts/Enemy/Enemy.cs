@@ -7,20 +7,20 @@ public class Enemy : MonoBehaviour
     public int maxHealth;
     public int health;
     public int Damage;
-    private Rigidbody2D target;
-    private CoinData coindata;
-    Vector2 dirVec;
+    protected Rigidbody2D target;
+    protected CoinData coindata;
+    protected Vector2 dirVec;
 
     public bool bIsLive;
-    private bool bIsBoss;
-    private MonsterData.SpawnPatternType mType;
+    protected bool bIsBoss;
+    protected MonsterData.SpawnPatternType mType;
 
-    Rigidbody2D rigid;
-    Collider2D coll;
-    SpriteRenderer spriter;
-    Animator anim;
+    protected Rigidbody2D rigid;
+    protected Collider2D coll;
+    protected SpriteRenderer spriter;
+    protected Animator anim;
     
-    void Awake()
+    protected virtual void Awake()
     {
         rigid = GetComponent <Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
@@ -34,9 +34,7 @@ public class Enemy : MonoBehaviour
     {
         if (!bIsLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
-        if (mType == MonsterData.SpawnPatternType.Swarm)
-            return;
-
+        
         dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
@@ -46,9 +44,7 @@ public class Enemy : MonoBehaviour
     {
         if (!bIsLive)
             return;
-        if (mType == MonsterData.SpawnPatternType.Swarm)
-            return;
-
+        
         spriter.flipX = target.position.x < rigid.position.x;
     }
     
@@ -85,7 +81,7 @@ public class Enemy : MonoBehaviour
         //HitAction(rDamage);
     }
 
-    public void HitAction(int rDamage)
+    public virtual void HitAction(int rDamage)
     {
         health -= rDamage;
         StartCoroutine(KnockBack());
@@ -97,15 +93,12 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
-            if(mType == MonsterData.SpawnPatternType.Chase)
-                CreateCoin();
+            CreateCoin();
             //GameManager.instance.kill++;
             //GameManager.instance.GetExp(coindata);
         }
         else
         {
-            if (mType != MonsterData.SpawnPatternType.Chase)
-                return;
             anim.SetTrigger("Hit");
         }
     }

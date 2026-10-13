@@ -39,7 +39,7 @@ public class SwarmSpanwer : MonoBehaviour
     {
         Vector3 playerPos = Player.instance.transform.position;
         BoxCollider2D AreaColl = Player.instance.AreaColl;
-        Vector3 startPos = HitGeometry.GetSpawnPosition(AreaColl, 3f);
+        Vector3 startPos = HitGeometry.GetSpawnPosition(AreaColl, 10f);
         Vector2 rushDir = (playerPos - startPos).normalized;
 
         for(int i=0; i<count; i++)
@@ -48,12 +48,13 @@ public class SwarmSpanwer : MonoBehaviour
             //일정한 밀도를 유지하기 위해 루트 사용, 0.5는 첫생성이 정중앙이 안되게 하여 밀도를 맞추기 위함
             float angle = i * 2.39996f; // 황금각(137.5)도를 맞추기 위한 호도법 값
             Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * r;
-            offset += Random.insideUnitCircle * 0.5f; //너무 정밀함으로 인한 문제 해결을 위한 마진
+            offset += Random.insideUnitCircle * 1f; //너무 정밀함으로 인한 문제 해결을 위한 마진
 
             GameObject enemy = GameManager.instance.pool.GetGM(poolIndex);
             enemy.transform.position = (Vector2)startPos + offset;
 
             SwarmEnemy se = enemy.GetComponent<SwarmEnemy>();
+            se.Init(data);
             se.StartRush(rushDir, rushSpeed);
         }
     }

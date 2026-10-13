@@ -22,4 +22,4 @@ MonoBehaviour:
   Speed: 8
   Damage: 11
   Coin: {fileID: 11400000, guid: 17485f68a4dbc5a45b0411c9b4c20d72, type: 2}
-  AnimCon: {fileID: 22100000, guid: 12cfc8b2360c2fc4499d4f6f6607671a, type: 2}
+  AnimCon: {fileID: 9100000, guid: 672862b6e97c33f4ebbc1996ad5b7020, type: 2}

@@ -53,7 +53,7 @@ public static class HitGeometry
         Vector3 offset = Vector3.zero;
 
         Bounds bounds = AreaColl.bounds;
-        float dist = bounds.extents.x + margin;
+        float dist = bounds.size.x + margin;
         float angle = Random.Range(0f, Mathf.PI * 2f);
 
         offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f) * dist;
