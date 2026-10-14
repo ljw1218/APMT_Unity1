@@ -82,11 +82,16 @@ public class Player : MonoBehaviour
             return;
 
         int Edamage = collision.transform.GetComponent<Enemy>().Damage;
-        hp -= (int)Time.deltaTime * Edamage;
+        hp -= Time.deltaTime * Edamage;
+        DeadSequence();
+        
+    }
 
-        if(hp <= 0.001)
+    public void DeadSequence()
+    {
+        if (hp <= 0.001)
         {
-            for(int i=2; i<transform.childCount; i++)
+            for (int i = 2; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(false);
             }
@@ -94,6 +99,4 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Dead");
         }
     }
-
-    
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
   weight: 0
   spawnTime: 1
   MaxHealth: 100
-  Speed: 8
-  Damage: 11
+  Speed: 7
+  Damage: 6
   Coin: {fileID: 11400000, guid: 17485f68a4dbc5a45b0411c9b4c20d72, type: 2}
   AnimCon: {fileID: 9100000, guid: 672862b6e97c33f4ebbc1996ad5b7020, type: 2}

@@ -74,11 +74,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (!collision.CompareTag("Weapon") || !bIsLive)
-        //    return;
-
-        //int rDamage = collision.GetComponent<Weapon>().Damage;
-        //HitAction(rDamage);
     }
 
     public virtual void HitAction(int rDamage)
@@ -93,6 +88,7 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
+            StartCoroutine(Dead());
             CreateCoin();
             //GameManager.instance.kill++;
             //GameManager.instance.GetExp(coindata);
@@ -117,13 +113,15 @@ public class Enemy : MonoBehaviour
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
-    void Dead()
+    private IEnumerator Dead()
     {
+        yield return new WaitForSeconds(0.2f);
         gameObject.SetActive(false);
         if(bIsBoss == true)
         {
             GameManager.instance.bisClear = true;
             GameManager.instance.uiClear.Show();
         }
+        yield return null;
     }
 }

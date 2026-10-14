@@ -1,0 +1,54 @@
+{
+    "asset": "d9f11dbfc2b09ae4cb43a5c969d20237",
+    "fileName": "01a138bf-6f0f-7229-af1d-7031308bda22.png",
+    "prompt": "96x96 pixel art game boss sprite, full body, centered, 1:1 square. A chubby angry plush seal toy boss standing upright on two short stubby plush legs, its round egg-shaped body lifted clearly off the ground, toddling forward mid-step with one stubby leg raised, like a walking plush toy. The legs are short round nubs with flat soft feet, clearly separate from the body, and the small white flippers stick out from the sides like little arms. The body is pure white with a few faint pale grey spots, smooth and undamaged. Its whole face is pushed deep into its head like a thumb pressed into soft dough: a deep round crater with fabric creases radiating outward and a thick puffy white rim around it. Inside the crater sit thick sharp V-shaped black angry brows and a pale sage-green muzzle with a tiny frown. Facing right in a 3/4 side view. Limited palette of about 12 colors, slightly desaturated, flat matte colors with simple 2-tone cel shading and hard pixel edges, 1-pixel dark brown outline around the whole characte",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "8707ab87926d35b40b973d1895ba9c74",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "high"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

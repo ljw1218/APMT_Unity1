@@ -71,6 +71,7 @@ public class SwarmEnemy : Enemy
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
+            Despawn();
             //GameManager.instance.kill++;
             //GameManager.instance.GetExp(coindata);
         }
@@ -86,4 +87,17 @@ public class SwarmEnemy : Enemy
     {
         isRushing = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (!GameManager.instance.bisLive)
+                return;
+
+            Player.instance.hp -= Damage;
+            Player.instance.DeadSequence();
+        }
+    }
+
 }
