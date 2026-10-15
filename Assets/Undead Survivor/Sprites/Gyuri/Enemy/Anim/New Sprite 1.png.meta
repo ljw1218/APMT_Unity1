@@ -1,19 +1,18 @@
 fileFormatVersion: 2
-guid: 11fec59a5389b5b41803ce8a419b52ee
+guid: 0c1e0e0ba6d2c7248835d6095638a3a9
+labels:
+- UnityAI
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8025257340952964053
-    second: AngrySeal_Dead_0
+      213: 8280258260336093118
+    second: New Sprite 1_0
   - first:
-      213: 5812378602193491112
-    second: AngrySeal_Dead_1
+      213: -1907213954323079415
+    second: New Sprite 1_1
   - first:
-      213: -9131530052500415970
-    second: AngrySeal_Dead_2
-  - first:
-      213: 2713605004157062092
-    second: AngrySeal_Dead_3
+      213: 7267515941164287731
+    second: New Sprite 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,12 +54,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 192
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AngrySeal_Dead_0
+      name: New Sprite 1_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 261
-        width: 902
-        height: 492
+        x: 111
+        y: 143
+        width: 810
+        height: 724
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b241761d7fe80a090800000000000000
-      internalID: -8025257340952964053
+      spriteID: eb7a3df540369e270800000000000000
+      internalID: 8280258260336093118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AngrySeal_Dead_1
+      name: New Sprite 1_1
       rect:
         serializedVersion: 2
-        x: 271
-        y: 711
-        width: 92
-        height: 82
+        x: 310
+        y: 143
+        width: 8
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a413db1b87b9a050800000000000000
-      internalID: 5812378602193491112
+      spriteID: 90f97ed63073885e0800000000000000
+      internalID: -1907213954323079415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AngrySeal_Dead_2
+      name: New Sprite 1_2
       rect:
         serializedVersion: 2
-        x: 373
-        y: 726
-        width: 20
-        height: 28
+        x: 317
+        y: 143
+        width: 8
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1a98e45cc9464180800000000000000
-      internalID: -9131530052500415970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AngrySeal_Dead_3
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 476
-        width: 21
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ccb018dbf59a8a520800000000000000
-      internalID: 2713605004157062092
+      spriteID: 3f606985e376bd460800000000000000
+      internalID: 7267515941164287731
       vertices: []
       indices: 
       edges: []
@@ -200,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +187,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AngrySeal_Dead_0: -8025257340952964053
-      AngrySeal_Dead_1: 5812378602193491112
-      AngrySeal_Dead_2: -9131530052500415970
-      AngrySeal_Dead_3: 2713605004157062092
+      New Sprite 1_0: 8280258260336093118
+      New Sprite 1_1: -1907213954323079415
+      New Sprite 1_2: 7267515941164287731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

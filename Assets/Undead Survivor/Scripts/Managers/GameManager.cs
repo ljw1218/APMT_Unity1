@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     [Header("# Game Control")]
     public bool bGameLive;
-    public float gameTime;
-    public int nBossSpawnTime;
+    public float gameTime {  get; private set; }
+    //public int nBossSpawnTime;
     public bool bisClear;
 
     void Awake()

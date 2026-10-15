@@ -81,10 +81,18 @@ public class Player : MonoBehaviour
         if (!GameManager.instance.bisLive)
             return;
 
+        spriter.color = new Color(255, 175, 121);
         int Edamage = collision.transform.GetComponent<Enemy>().Damage;
         hp -= Time.deltaTime * Edamage;
         DeadSequence();
-        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!GameManager.instance.bisLive)
+            return;
+
+        spriter.color = Color.white;
     }
 
     public void DeadSequence()

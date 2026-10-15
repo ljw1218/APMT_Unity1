@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd688ae8a034c440b69f632ecd8f961, type: 3}
   m_Name: BossEnemy
   m_EditorClassIdentifier: Assembly-CSharp::MonsterData
-  MonsterName: level1
-  isBoss: 0
+  MonsterName: AngrySeal
+  isBoss: 1
   spriteType: 0
   patternType: 0
-  weight: 1
-  spawnTime: 1
-  MaxHealth: 130
+  weight: 0
+  spawnTime: 0
+  MaxHealth: 5000
   Speed: 2
   Damage: 15
-  Coin: {fileID: 11400000, guid: 17485f68a4dbc5a45b0411c9b4c20d72, type: 2}
-  AnimCon: {fileID: 22100000, guid: 8d1d920724ffb8a409ce0e458dc4b7a9, type: 2}
+  Coin: {fileID: 11400000, guid: bf11e8b4fba669f45b31d449ae3b573e, type: 2}
+  AnimCon: {fileID: 22100000, guid: f8d8fff0772f27844a2df00de1f399e3, type: 2}

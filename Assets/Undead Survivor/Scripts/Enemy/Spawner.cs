@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
     }
     IEnumerator SpawnBossTimer()
     {
-        yield return new WaitForSeconds(GameManager.instance.nBossSpawnTime);
+        yield return new WaitForSeconds(waveData.bossSpawnTime);
         SpawnBoss();
     }
     void SpawnBoss()
