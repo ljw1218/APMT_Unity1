@@ -1,18 +1,22 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
     [Header("Sound")]
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioClip startClip;
+    [SerializeField] private Image mainPanel;
+    [SerializeField] private Image optionPanel;
 
     bool isLoading = false;
 
-    void Awake()
+    void Start()
     {
-        
+        mainPanel.gameObject.SetActive(true);
+        optionPanel.gameObject.SetActive(false);
     }
 
     public void OnStartButton()
@@ -37,6 +41,12 @@ public class MainManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(wait);
 
         SceneManager.LoadScene(Define.Scene.Load);
+    }
+
+    public void OnOptionButton()
+    {
+        mainPanel.gameObject.SetActive(false);
+        optionPanel.gameObject.SetActive(true);
     }
 
     public void OnExitButton()
