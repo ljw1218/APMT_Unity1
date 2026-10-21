@@ -1,0 +1,15 @@
+{
+    "asset": "233a711b6eb3816458b66212970520e0",
+    "fileName": "01a15ca6-c51b-74f3-a20f-ea09a634425c.wav",
+    "prompt": "Tiny cute \"to-rong~\" slider tick sound, a very quick high grace note followed by one slightly higher sweet note that rings briefly, toy xylophone and music box tone, bright round and clean, high pitch, kawaii game UI, 0.25 seconds. Avoid: low pitch, thud, metallic bell, long ringing, melody, more than two notes, noise, reverb, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

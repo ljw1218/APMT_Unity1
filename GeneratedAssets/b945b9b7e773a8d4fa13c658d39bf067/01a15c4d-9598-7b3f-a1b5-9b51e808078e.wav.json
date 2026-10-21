@@ -1,0 +1,15 @@
+{
+    "asset": "b945b9b7e773a8d4fa13c658d39bf067",
+    "fileName": "01a15c4d-9598-7b3f-a1b5-9b51e808078e.wav",
+    "prompt": "Very cute high-pitched confirm button sound, toy xylophone two quick rising notes \"ti-ding!\" with a tiny sparkle twinkle at the end, happy and satisfying like a success chime in a kawaii children's game, bright pure clean tone, soft attack, 0.35 seconds. Avoid: low pitch, noise, thud, harsh click, reverb, music loop, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

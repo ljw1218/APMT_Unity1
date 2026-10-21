@@ -1,0 +1,15 @@
+{
+    "asset": "47faf77a1f514a34e8c32e0be63dd61e",
+    "fileName": "01a15c30-aadb-71cc-93e9-862f5e6dd9dd.wav",
+    "prompt": "Cute music box chime, three tiny rising notes, high and twinkly, soft and dreamy, magical sparkle, cozy kawaii game UI, clean, 0.5 seconds. Avoid: low notes, harsh sound, noise, long reverb, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

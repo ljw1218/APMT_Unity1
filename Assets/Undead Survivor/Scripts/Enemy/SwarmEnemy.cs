@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VectorGraphics;
 using UnityEngine;
 
@@ -9,13 +10,16 @@ public class SwarmEnemy : Enemy
     private bool enteredScreen;
     private float timer;
     private float margin = 0.15f;
+    private SpriteRenderer sr;
 
+    private Color32 colorHit = new Color32(255, 167, 167, 255);
     Camera cam;
 
     protected override void Awake()
     {
         base.Awake();
         cam = Camera.main;
+        sr = GetComponent<SpriteRenderer>();
     }
     public void StartRush(Vector2 dir,float rushSpeed)
     {
@@ -75,8 +79,15 @@ public class SwarmEnemy : Enemy
             //GameManager.instance.kill++;
             //GameManager.instance.GetExp(coindata);
         }
+        StartCoroutine(ChangeColor());
     }
 
+    private IEnumerator ChangeColor()
+    {
+        sr.color = colorHit;
+        yield return new WaitForSeconds(0.15f);
+        sr.color = Color.white;
+    }
     private void Despawn()
     {
         isRushing = false;

@@ -1,0 +1,15 @@
+{
+    "asset": "47faf77a1f514a34e8c32e0be63dd61e",
+    "fileName": "01a15c2d-217f-72a4-8677-461552944e89.wav",
+    "prompt": "Very cute high-pitched toy xylophone sound, two quick rising notes \"ding-ding!\", bright and sparkly, sweet and happy like a children's game menu, pure clean tone, soft attack, 0.4 seconds. Avoid: low pitch, noise, thud, reverb, music loop, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

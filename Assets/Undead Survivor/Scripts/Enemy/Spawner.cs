@@ -3,12 +3,14 @@ using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
     public static Spawner instance;
     [SerializeField] public WaveData waveData;
     [SerializeField] public MonsterData[] monsterData;
+    [SerializeField] private Slider bossSlider;
     private int level;
     private float timer;
     private int totalWeight = 0;
@@ -23,6 +25,7 @@ public class Spawner : MonoBehaviour
     }
     void Start()
     {
+        bossSlider.gameObject.SetActive(false);
         for(int i= basicLevelStart; i<monsterData.Length; i++)
         {
             totalWeight += monsterData[i].weight;
@@ -62,6 +65,8 @@ public class Spawner : MonoBehaviour
     void SpawnBoss()
     {
         Spawn(levelBoss);
+        bossSlider.gameObject.SetActive(true);
+        bossSlider.value = 1f;
     }
     void Spawn(int index)
     {
@@ -71,9 +76,13 @@ public class Spawner : MonoBehaviour
         GameObject enemy = GameManager.instance.pool.GetGM(poolIndex);
         enemy.transform.position = spawnPos;
         enemy.GetComponent<Enemy>().Init(monsterData[index]);
-        
     }
-    
+    public void UpdateBossSlider(float fvalue)
+    {
+        bossSlider.value = fvalue;
+        if (fvalue <= 0.01f)
+            bossSlider.gameObject.SetActive(false);
+    }
     //Vector3 GetSpawnPosition(BoxCollider2D AreaColl, float margin)
     //{
     //    Vector3 offset = Vector3.zero;

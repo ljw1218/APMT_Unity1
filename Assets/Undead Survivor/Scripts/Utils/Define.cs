@@ -14,6 +14,11 @@ public static class Define
     public static float AttractSpeed = 4f;
     public static string strRushEnemy = "RushEnemy";
     public static int poolFactor = 1;
+    public static int displayWindowFull_Index = 4;
+    public static int displayFull_Index = 5;
+    public static string strEffectRatio = "EffectRatio";
+    public static string strED = "ED";
+    public static string strPD = "PD";
 
     public enum WeaponType
     {

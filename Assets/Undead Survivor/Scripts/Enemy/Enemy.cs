@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     protected Vector2 dirVec;
 
     public bool bIsLive;
-    protected bool bIsBoss;
+    public bool bIsBoss;
     protected MonsterData.SpawnPatternType mType;
 
     protected Rigidbody2D rigid;
@@ -80,6 +80,9 @@ public class Enemy : MonoBehaviour
     {
         health -= rDamage;
         StartCoroutine(KnockBack());
+        float fvalue = health / maxHealth;
+        if (bIsBoss)
+            Spawner.instance.UpdateBossSlider(fvalue);
 
         if (health <= 0)
         {

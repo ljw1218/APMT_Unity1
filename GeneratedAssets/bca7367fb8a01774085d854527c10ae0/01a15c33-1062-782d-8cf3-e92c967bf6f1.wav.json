@@ -1,0 +1,15 @@
+{
+    "asset": "bca7367fb8a01774085d854527c10ae0",
+    "fileName": "01a15c33-1062-782d-8cf3-e92c967bf6f1.wav",
+    "prompt": "Tiny cute bubble pop sound, high-pitched soft \"pyu\" with a quick downward pitch slide, bouncy and round, cartoon kawaii style, very clean, 0.25 seconds. Avoid: low bass, wet water splash, noise, echo, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

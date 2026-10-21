@@ -1,0 +1,15 @@
+{
+    "asset": "47faf77a1f514a34e8c32e0be63dd61e",
+    "fileName": "01a15c29-d50e-7b52-a748-690e0dfee0d2.wav",
+    "prompt": "Cute bubbly pop sound for opening a game menu, quick upward boing, playful and light, short and snappy, clean. Avoid: music, voice, harsh high frequencies, echo.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

@@ -1,0 +1,15 @@
+{
+    "asset": "013f9043a7a370a4d880572869bdb7fb",
+    "fileName": "01a15c57-abaf-7377-905a-5d9760fa24ef.wav",
+    "prompt": "Cute game UI button tap sound, a single tiny soft \"pok!\" pop, high-pitched and round like pressing a small squishy rubber button, with a slight quick upward pitch flick, light and clean, kawaii style, very short 0.12 seconds, dry. Avoid: melody, multiple notes, metallic click, mechanical keyboard sound, low thud, bell ringing, noise, reverb, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

@@ -1,0 +1,15 @@
+{
+    "asset": "52bb6293bd9015849b5b103a1b042653",
+    "fileName": "01a15c52-021b-7a1c-8c6b-d288cce9098e.wav",
+    "prompt": "Cute game UI confirm sound, \"settings applied\" success chime, two quick rising notes \"pon-pin!\" with the second note higher and clearly resolved like a happy completion, soft round marimba tone with a light bubbly pop on each note, tiny sparkle at the very end, bright cheerful kawaii style, crisp and decisive, 0.3 seconds, clean. Avoid: animal sounds, jelly or jumping sounds, long pitch slide, metallic bell ringing,low pitch, noise, reverb,voice",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

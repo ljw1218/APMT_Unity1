@@ -148,7 +148,11 @@ public class W_Seal : MonoBehaviour
             return;
 
         if (other.TryGetComponent(out Enemy enemy))
+        {
+            if (enemy.bIsBoss)
+                return;
             enemy.HitAction(Damage);
+        }
     }
 
     void Despawn()

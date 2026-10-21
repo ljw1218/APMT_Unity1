@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   InitSpawnCount: 10
   basicSpawnTime: 1.5
-  bossSpawnTime: 40
+  bossSpawnTime: 20
   swarmSpawnTime: 20

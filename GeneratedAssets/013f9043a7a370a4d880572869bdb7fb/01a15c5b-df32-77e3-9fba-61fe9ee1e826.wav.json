@@ -1,0 +1,15 @@
+{
+    "asset": "013f9043a7a370a4d880572869bdb7fb",
+    "fileName": "01a15c5b-df32-77e3-9fba-61fe9ee1e826.wav",
+    "prompt": "Tiny cute high-pitched \"pip!\" button sound, a single small bright plink like a toy piano high note tapped once, light as a soap bubble popping, sweet and crisp kawaii game UI tap, very high pitch, very short 0.1 seconds, clean and dry. Avoid: low pitch, deep thud, rubber, wooden knock, mechanical click, melody, multiple notes, bell ringing, noise, reverb, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

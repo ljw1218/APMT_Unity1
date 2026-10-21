@@ -8,7 +8,6 @@ public class Option : MonoBehaviour
 
     [Header("큰 패널")]
     [SerializeField] private Image mainPanel;
-    [SerializeField] private Image optionPanel;
 
     [Header("옵션탭 패널")]
     [SerializeField] private Image graphicPanel;
@@ -30,24 +29,18 @@ public class Option : MonoBehaviour
     [SerializeField] private Button applySoundButton;
 
     private int graphicTemp;
-    private readonly Vector2Int[] displayPresets =
-    {
-        new Vector2Int(1280,720),
-        new Vector2Int(1600,900),
-        new Vector2Int(1920,1080),
-        new Vector2Int(2560,1440),
-    };
-
+    
     public void Start()
     {
-        BGMSlider.value = GameData.BGMRatio;
-        ESSlider.value = GameData.ESRatio;
-        effectSlider.value = GameData.EffectRatio;
+        
     }
 
-    public void OnEnable()
+    public void OnOpen()
     {
         OnClick_SelectGraphic();
+        SetSliderPosition();
+        if(mainPanel == null)
+            GameManager.instance.Stop();
     }
     public void OnDisable()
     {
@@ -61,15 +54,23 @@ public class Option : MonoBehaviour
         BGMSlider.value = GameData.BGMRatio;
         ESSlider.value = GameData.ESRatio;
     }
-    public void OnClick_ExitOption()
+    public void OnClick_CloseOption()
     {
-        optionPanel.gameObject.SetActive(false);
-        mainPanel.gameObject.SetActive(true);
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.closeClip));
+        
+        if(mainPanel != null)
+            mainPanel.gameObject.SetActive(true);
+        else
+        {
+            GameManager.instance.Resume();
+        }
         SetSliderPosition();
+        gameObject.SetActive(false);
     }
 
     public void OnClick_SelectGraphic()
     {
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.buttonClip));
         graphicPanel.gameObject.SetActive(true);
         soundPanel.gameObject.SetActive(false);
         optionGraphicButton.GetComponent<Image>().color = selected_Color;
@@ -79,6 +80,7 @@ public class Option : MonoBehaviour
 
     public void OnClick_SelectSound()
     {
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.buttonClip));
         graphicPanel.gameObject.SetActive(false);
         soundPanel.gameObject.SetActive(true);
         optionGraphicButton.GetComponent<Image>().color = Free_Color;
@@ -88,6 +90,7 @@ public class Option : MonoBehaviour
 
     public void OnClick_DisplayButton(int index)
     {
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.buttonClip));
         displayButtons[graphicTemp].GetComponent<Image>().color = Free_Color;
         graphicTemp = index;
         displayButtons[index].GetComponent<Image>().color = selected_Color;
@@ -95,20 +98,30 @@ public class Option : MonoBehaviour
     }
     public void OnClick_ApplyGraphic()
     {
-        GameData.DisplayIndex = graphicTemp;
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.applyClip));
+        int prevIndex = GameData.DisplayIndex;
+        //그래픽 저장은 매니저에서 따로
+        PrefsManager.displayTemp = graphicTemp;
         GameData.EffectRatio = effectSlider.value;
+        PlayerPrefs.SetFloat(Define.strEffectRatio, effectSlider.value);
         GameData.showED = enemyDamageToggle.isOn;
+        PlayerPrefs.SetInt(Define.strED, enemyDamageToggle.isOn ? 1 : 0);
         GameData.showPD = playerDamageToggle.isOn;
+        PlayerPrefs.SetInt(Define.strPD, playerDamageToggle.isOn ? 1 : 0);
+        PlayerPrefs.Save();
+        if (prevIndex != GameData.DisplayIndex)
+            PrefsManager.SetDisplay();
+
     }
 
     public void OnClick_ApplySound()
     {
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.applyClip));
         GameData.BGMRatio = BGMSlider.value;
         GameData.ESRatio = ESSlider.value;
+        PrefsManager.SetVolume(SoundManager.instance.mixer, PrefsManager.names[0], GameData.BGMRatio, true);
+        PrefsManager.SetVolume(SoundManager.instance.mixer, PrefsManager.names[1], GameData.ESRatio, true);
     }
 
-    public void SetDisplay()
-    {
 
-    }
 }

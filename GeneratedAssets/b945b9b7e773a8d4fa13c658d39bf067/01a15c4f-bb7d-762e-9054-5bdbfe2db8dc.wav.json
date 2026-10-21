@@ -1,0 +1,15 @@
+{
+    "asset": "b945b9b7e773a8d4fa13c658d39bf067",
+    "fileName": "01a15c4f-bb7d-762e-9054-5bdbfe2db8dc.wav",
+    "prompt": "Super cute bouncy \"pyon!\" sound for a confirm button, a soft round tone that quickly slides upward in pitch then bounces once, like a tiny jelly hopping, squishy and playful cartoon kawaii style, warm marimba-like wooden tone, very short 0.3 seconds, clean. Avoid: metallic bell, single flat beep, sharp ringing, low pitch, noise, reverb, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

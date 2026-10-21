@@ -1,0 +1,15 @@
+{
+    "asset": "47faf77a1f514a34e8c32e0be63dd61e",
+    "fileName": "01a15c2f-e811-7f51-94be-8b041e3d8292.wav",
+    "prompt": "Tiny cute bubble pop sound, high-pitched \"pyoing!\" with a quick upward pitch slide, squeaky and bouncy, cartoon kawaii style, very clean and round, 0.3 seconds. Avoid: low bass, wet water splash, noise, echo, voice.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 0.5,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

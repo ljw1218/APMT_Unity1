@@ -1,22 +1,28 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
-    [Header("Sound")]
-    [SerializeField] private AudioSource sfxSource;
-    [SerializeField] private AudioClip startClip;
+    public static MainManager instance;
     [SerializeField] private Image mainPanel;
     [SerializeField] private Image optionPanel;
-
+    
     bool isLoading = false;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         mainPanel.gameObject.SetActive(true);
         optionPanel.gameObject.SetActive(false);
+        PrefsManager.DisplayLoad();
+        PrefsManager.LoadSavedVolume(SoundManager.instance.mixer);
+        PrefsManager.LoadOption();
     }
 
     public void OnStartButton()
@@ -24,29 +30,15 @@ public class MainManager : MonoBehaviour
         if (isLoading)
             return;
         isLoading = true;
-        StartCoroutine(PlaySoundThenLoad());
-    }
-
-    private IEnumerator PlaySoundThenLoad()
-    {
-        float wait = 0f;
-
-        if (sfxSource != null && startClip != null)
-        {
-            sfxSource.PlayOneShot(startClip);
-            wait = startClip.length + 0.3f;
-        }
-
-        // timeScale이 0이어도 기다릴 수 있게 Realtime 사용
-        yield return new WaitForSecondsRealtime(wait);
-
-        SceneManager.LoadScene(Define.Scene.Load);
+        StartCoroutine(SoundManager.instance.PlaySoundThenLoad());
     }
 
     public void OnOptionButton()
     {
         mainPanel.gameObject.SetActive(false);
         optionPanel.gameObject.SetActive(true);
+        optionPanel.GetComponent<Option>().OnOpen();
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.openClip));
     }
 
     public void OnExitButton()
@@ -57,4 +49,6 @@ public class MainManager : MonoBehaviour
                 UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    
 }

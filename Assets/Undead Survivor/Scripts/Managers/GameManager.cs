@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("# Game Object")]
     public PoolManager pool;
     public LevelUp uiLevelUp;
+    public Image optionPanel;
     public End uiClear;
     public End uiDead;
 
@@ -53,6 +55,13 @@ public class GameManager : MonoBehaviour
     {
         //if 승리 이면 데이터 저장 로직 추가 필요
         SceneManager.LoadScene(Define.Scene.Main);
+    }
+
+    public void OnOptionClicked()
+    {
+        optionPanel.gameObject.SetActive(true);
+        optionPanel.GetComponent<Option>().OnOpen();
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.openClip));
     }
 
 }
