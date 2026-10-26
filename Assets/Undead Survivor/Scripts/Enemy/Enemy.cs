@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
     {
         health -= rDamage;
         StartCoroutine(KnockBack());
-        float fvalue = health / maxHealth;
+        float fvalue = (float)health / maxHealth;
         if (bIsBoss)
             Spawner.instance.UpdateBossSlider(fvalue);
 
@@ -122,6 +122,7 @@ public class Enemy : MonoBehaviour
         gameObject.SetActive(false);
         if(bIsBoss == true)
         {
+            GameManager.instance.GameEndSequnce();
             GameManager.instance.bisClear = true;
             GameManager.instance.uiClear.Show();
         }

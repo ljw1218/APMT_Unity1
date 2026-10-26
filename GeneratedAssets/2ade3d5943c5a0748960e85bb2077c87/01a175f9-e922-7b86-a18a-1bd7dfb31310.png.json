@@ -1,0 +1,54 @@
+{
+    "asset": "56833c2433ea3be46a4568a277da30b2",
+    "fileName": "01a175f9-e922-7b86-a18a-1bd7dfb31310.png",
+    "prompt": "48x48 pixel art game sprite of a small chubby orange blob toy monster in a sitting pose, full body centered on a solid flat magenta (#FF00FF) background. Same character design as the reference: round egg-shaped peach-orange body, two curved red-orange horns on top of the head, angry slanted eyes with clearly visible pure white eyeballs outlined in dark brown, small slanted red-orange eyebrow marks above the eyes, tiny flat frowning mouth, short stubby arms, short stubby feet. Pose: sitting firmly on its bottom with a flat base, short legs stretched forward, arms crossed over its belly, grumpy and smug expression as if proudly sitting on top of something it defeated. Three-quarter side view facing right. Matte flat colors with two-tone cel shading only, about 12 colors, slightly desaturated palette, clean 1-pixel dark brown outline around the whole sprite. Square 1:1 composition, entire body visible, minimal empty space below the body. Plain magenta background only, no ground and no props.\r\nAvoid: white backgr",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "0934adb26106c954dbceecaa1c2e6d5a",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": [
+            {
+                "key": "input_fidelity",
+                "value": "low"
+            },
+            {
+                "key": "quality",
+                "value": "medium"
+            },
+            {
+                "key": "background",
+                "value": "transparent"
+            }
+        ]
+    }
+}

@@ -103,6 +103,7 @@ public class Player : MonoBehaviour
             {
                 transform.GetChild(i).gameObject.SetActive(false);
             }
+            GameManager.instance.GameEndSequnce();
             GameManager.instance.uiDead.Show();
             anim.SetTrigger("Dead");
         }

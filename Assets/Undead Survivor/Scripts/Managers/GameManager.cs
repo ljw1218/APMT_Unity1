@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public LevelUp uiLevelUp;
     public Image optionPanel;
+    public Image OverPanel;
     public End uiClear;
     public End uiDead;
 
@@ -32,12 +33,19 @@ public class GameManager : MonoBehaviour
         bisLive = true;
         uiLevelUp.Hide();
         uiClear.Hide();
+        OverPanel.gameObject.SetActive(false);
         bisClear = false;
     }
     void Update()
     {
         gameTime += Time.deltaTime;
 
+    }
+    public void GameEndSequnce()
+    {
+        bGameLive = false;
+        Time.timeScale = 0;
+        OverPanel.gameObject.SetActive(true);
     }
     public void Stop()
     {
