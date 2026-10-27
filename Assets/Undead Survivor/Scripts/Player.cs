@@ -84,6 +84,13 @@ public class Player : MonoBehaviour
         spriter.color = new Color(255, 175, 121);
         int Edamage = collision.transform.GetComponent<Enemy>().Damage;
         hp -= Time.deltaTime * Edamage;
+        if (GameData.showPD)
+        {
+            Vector3 pos = transform.position + Vector3.up * 1f + (Vector3)Random.insideUnitCircle * 0.3f;
+            GameObject damObject = PoolManager.instance.GetGM((int)Define.PoolType.Damage);
+            damObject.transform.position = pos;
+            damObject.GetComponent<DamageText>().Init(Edamage,true);
+        }
         DeadSequence();
     }
 
@@ -104,7 +111,6 @@ public class Player : MonoBehaviour
                 transform.GetChild(i).gameObject.SetActive(false);
             }
             GameManager.instance.GameEndSequnce();
-            GameManager.instance.uiDead.Show();
             anim.SetTrigger("Dead");
         }
     }

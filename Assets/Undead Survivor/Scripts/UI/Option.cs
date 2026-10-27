@@ -102,6 +102,8 @@ public class Option : MonoBehaviour
         int prevIndex = GameData.DisplayIndex;
         //그래픽 저장은 매니저에서 따로
         PrefsManager.displayTemp = graphicTemp;
+        GameData.DisplayIndex = graphicTemp;
+        
         GameData.EffectRatio = effectSlider.value;
         PlayerPrefs.SetFloat(Define.strEffectRatio, effectSlider.value);
         GameData.showED = enemyDamageToggle.isOn;
@@ -112,6 +114,8 @@ public class Option : MonoBehaviour
         if (prevIndex != GameData.DisplayIndex)
             PrefsManager.SetDisplay();
 
+        if (GameData.isGameScene)
+            WeaponManager.instance.ChangeAlpha();
     }
 
     public void OnClick_ApplySound()

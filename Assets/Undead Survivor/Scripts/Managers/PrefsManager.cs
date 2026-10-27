@@ -21,6 +21,7 @@ public static class PrefsManager
         if (!IsAvailable())
             return false;
 
+        Debug.Log(GameData.DisplayIndex);
         if (GameData.DisplayIndex == Define.displayWindowFull_Index)
             Screen.SetResolution(GameData.monitorW, GameData.monitorH, FullScreenMode.FullScreenWindow);
         else if (GameData.DisplayIndex == Define.displayFull_Index)
@@ -67,7 +68,7 @@ public static class PrefsManager
         if (name == names[0])
             mixer.SetFloat(name, db);
         else
-            mixer.SetFloat(name, db+10f);
+            mixer.SetFloat(name, db);
         if (isConfirm)
         {
             if (name == names[0])
@@ -93,7 +94,7 @@ public static class PrefsManager
             else
             {
                 GameData.ESRatio = volume;
-                mixer.SetFloat(p, ToDb(volume)+10f);
+                mixer.SetFloat(p, ToDb(volume));
             }
         }
     }

@@ -29,6 +29,11 @@ public class W_Pipe : Weapon
         sr.enabled = false;
     }
 
+    protected override void Start()
+    {
+        base.Start();
+        ChangeAlpha(sr);
+    }
     protected override void Update()
     {
         base.Update();
@@ -68,6 +73,8 @@ public class W_Pipe : Weapon
 
         transform.position = LockedStart;
 
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.pipeClip));
+
         trail.Clear();
         trail.emitting = true;
         CheckHit(LockedStart,LockedEnd);
@@ -90,8 +97,11 @@ public class W_Pipe : Weapon
 
         foreach(var col in candidates)
         {
-            Vector2 targetPos = col.transform.position;
-            float distToLine = HitGeometry.DistancePointToSegment(targetPos, StartPosition, EndPosition);
+            //Vector2 targetPos = col.transform.position;
+            Vector2 targetCenter = col.bounds.center;
+            Vector2 onLine = HitGeometry.ClosetPointOnSegment(targetCenter, StartPosition, EndPosition);
+            Vector2 onCol = col.ClosestPoint(onLine);
+            float distToLine = HitGeometry.DistancePointToSegment(onCol, StartPosition, EndPosition);
 
             if(distToLine <= hitWidth)
             {
@@ -112,5 +122,9 @@ public class W_Pipe : Weapon
         Gizmos.DrawLine(LockedStart,LockedEnd);
         Gizmos.DrawWireSphere(LockedStart, hitWidth);
         Gizmos.DrawWireSphere(LockedEnd, hitWidth);
+    }
+    public override void OnChangeEffectValue()
+    {
+        ChangeAlpha(sr);
     }
 }

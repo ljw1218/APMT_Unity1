@@ -70,6 +70,7 @@ public class Enemy : MonoBehaviour
         mType = data.patternType;
         coindata = data.Coin;
         anim.runtimeAnimatorController = data.AnimCon;
+        spriter.color = Color.white;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,6 +84,14 @@ public class Enemy : MonoBehaviour
         float fvalue = (float)health / maxHealth;
         if (bIsBoss)
             Spawner.instance.UpdateBossSlider(fvalue);
+
+        if (GameData.showED)
+        {
+            Vector3 pos = transform.position + Vector3.up * 1f + (Vector3)Random.insideUnitCircle * 0.3f;
+            GameObject damObject = PoolManager.instance.GetGM((int)Define.PoolType.Damage);
+            damObject.transform.position = pos;
+            damObject.GetComponent<DamageText>().Init(rDamage, false);
+        }
 
         if (health <= 0)
         {
@@ -122,10 +131,10 @@ public class Enemy : MonoBehaviour
         gameObject.SetActive(false);
         if(bIsBoss == true)
         {
-            GameManager.instance.GameEndSequnce();
             GameManager.instance.bisClear = true;
-            GameManager.instance.uiClear.Show();
+            GameManager.instance.GameEndSequnce();
         }
         yield return null;
     }
+
 }

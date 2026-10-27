@@ -18,7 +18,7 @@ MonoBehaviour:
   patternType: 0
   weight: 2
   spawnTime: 1
-  MaxHealth: 60
+  MaxHealth: 85
   Speed: 1.5
   Damage: 8
   Coin: {fileID: 11400000, guid: 5f0ecb0ce66daa248a2a8c8acd781a69, type: 2}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WaveData
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   InitSpawnCount: 10
-  basicSpawnTime: 1.5
-  bossSpawnTime: 20
-  swarmSpawnTime: 20
+  basicSpawnTime: 1
+  bossSpawnTime: 60
+  swarmSpawnTime: 10

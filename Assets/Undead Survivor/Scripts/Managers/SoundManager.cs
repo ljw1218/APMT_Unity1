@@ -14,6 +14,15 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioClip buttonClip;
     [SerializeField] public AudioClip applyClip;
 
+    [Header("BGM_Clip")]
+    [SerializeField] public AudioClip noramlBGMClip;
+    [SerializeField] public AudioClip bossBGMClip;
+
+    [Header("Effect_Sound")]
+    [SerializeField] public AudioClip pipeClip;
+    [SerializeField] public AudioClip SealClip;
+    [SerializeField] public AudioClip SealPunchClip;
+    public AudioSource bgmSource;
     private void Awake()
     {
         instance = this;
@@ -38,5 +47,15 @@ public class SoundManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(wait);
 
         SceneManager.LoadScene(Define.Scene.Load);
+    }
+
+    public void ChangeClip(bool isBoss)
+    {
+        bgmSource.Stop();
+        if (isBoss)
+            bgmSource.generator = bossBGMClip;
+        else
+            bgmSource.generator = noramlBGMClip;
+        bgmSource.Play();
     }
 }

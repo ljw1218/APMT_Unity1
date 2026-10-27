@@ -18,6 +18,7 @@ public class MainManager : MonoBehaviour
     }
     void Start()
     {
+        GameData.isGameScene = false;
         mainPanel.gameObject.SetActive(true);
         optionPanel.gameObject.SetActive(false);
         PrefsManager.DisplayLoad();

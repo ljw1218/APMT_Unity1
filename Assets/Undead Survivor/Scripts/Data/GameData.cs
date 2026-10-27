@@ -11,4 +11,5 @@ public static class GameData
     public static bool isFullScreen = false;
     public static int monitorW = Display.main.systemWidth;
     public static int monitorH = Display.main.systemHeight;
+    public static bool isGameScene = false;
 }

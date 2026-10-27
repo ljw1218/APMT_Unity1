@@ -8,8 +8,8 @@ public class W_PuffPool : Weapon
     [SerializeField] private float radius = 1.5f;
     [SerializeField] private float RotateSpeed = 180f;
     private List<W_Puff> JNGs = new();
-    private int AttackLimit = 20;
-    private int RecoveryTime = 15;
+    [SerializeField] private int AttackLimit = 10;
+    [SerializeField] private int RecoveryTime = 15;
     private Queue<int> QInactive = new();
     private float time;
 
@@ -51,6 +51,8 @@ public class W_PuffPool : Weapon
             JNG.transform.SetParent(transform, false);
             JNGs.Add(JNG);
             JNGs[JNGs.Count - 1].InitJNG(this, AttackLimit);
+            sr = JNGs[JNGs.Count - 1].GetComponent<SpriteRenderer>();
+            ChangeAlpha(sr);
         }
     }
     private void Arrange()
@@ -65,6 +67,14 @@ public class W_PuffPool : Weapon
         }
     }
 
+    public override void OnChangeEffectValue()
+    {
+        for(int i=0; i<JNGs.Count; i++)
+        {
+            sr = JNGs[i].GetComponent<SpriteRenderer>();
+            ChangeAlpha(sr);
+        }
+    }
     //private void AddJNG()
     //{
     //    W_JNG temp = null;
@@ -110,6 +120,7 @@ public class W_PuffPool : Weapon
             {
                 if (JNGs[i].isAlive)
                 {
+                    JNGs[i].isAlive = false;
                     QInactive.Enqueue(i);
                     JNGs[i].gameObject.SetActive(false);
                     time = 0;

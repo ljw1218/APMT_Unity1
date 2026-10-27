@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Image optionPanel;
     public Image OverPanel;
-    public End uiClear;
-    public End uiDead;
+    public Image ClearPanel;
+    public Image DeadPanel;
 
     [Header("# Player Info")]
     public bool bisLive;
@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
     {
         bisLive = true;
         uiLevelUp.Hide();
-        uiClear.Hide();
         OverPanel.gameObject.SetActive(false);
         bisClear = false;
+        GameData.isGameScene = true;
     }
     void Update()
     {
@@ -46,7 +46,18 @@ public class GameManager : MonoBehaviour
         bGameLive = false;
         Time.timeScale = 0;
         OverPanel.gameObject.SetActive(true);
+        if(bisClear)
+        {
+            ClearPanel.gameObject.SetActive(true);
+            DeadPanel.gameObject.SetActive(false);
+        }
+        else
+        {
+            ClearPanel.gameObject.SetActive(false);
+            DeadPanel.gameObject.SetActive(true);
+        }
     }
+    
     public void Stop()
     {
         bGameLive = false;

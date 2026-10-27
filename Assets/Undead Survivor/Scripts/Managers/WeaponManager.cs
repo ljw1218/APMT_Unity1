@@ -16,6 +16,7 @@ public class WeaponManager : MonoBehaviour
         weapon.transform.SetParent(transform,false);
         weapon.transform.localPosition = Vector3.zero;
         WeaponDict.Add(data, weapon.GetComponent<Weapon>());
+        ChangeAlpha();
     }
     public void LevelUpWeapon(WeaponItemData data)
     {
@@ -27,5 +28,10 @@ public class WeaponManager : MonoBehaviour
     {
         Weapon weapon = WeaponDict[data];
         weapon.SetActive();
+    }
+    public void ChangeAlpha()
+    {
+        foreach (Weapon w in WeaponDict.Values)
+            w.OnChangeEffectValue();
     }
 }

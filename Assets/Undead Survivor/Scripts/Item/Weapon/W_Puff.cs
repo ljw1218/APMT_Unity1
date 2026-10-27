@@ -10,6 +10,7 @@ public class W_Puff : MonoBehaviour
     {
         this.owner = owner;
         RemainHit = Limit;
+        isAlive = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +19,7 @@ public class W_Puff : MonoBehaviour
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             enemy.HitAction(owner.Damage);
+            RemainHit--;
         }
     }
 }

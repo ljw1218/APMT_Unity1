@@ -2,6 +2,19 @@ using UnityEngine;
 
 public static class HitGeometry
 {
+    public static Vector2 ClosetPointOnSegment(Vector2 point, Vector2 a, Vector2 b)
+    {
+        Vector2 ab = b - a;
+        float sqrLen = ab.sqrMagnitude; // 비용절감
+        if (sqrLen < 0.0001f)
+            return point;
+
+        float t = Mathf.Clamp01(Vector2.Dot(point - a, ab) / sqrLen);
+        //0아래면 a 바깥쪽, 1이상은 b바깥쪽. 캡슐모양으로 만들기 위함
+        Vector2 projection = a + t * ab;
+        return projection;
+    }
+
     //점에서 선분까지 최단거리
     public static float DistancePointToSegment(Vector2 point, Vector2 a, Vector2 b)
     {

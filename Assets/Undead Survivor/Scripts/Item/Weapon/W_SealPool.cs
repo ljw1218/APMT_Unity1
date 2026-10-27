@@ -54,6 +54,7 @@ public class W_SealPool : Weapon
             Vector2 pos = (Vector2)player.transform.position + new Vector2(spawnOffset.x * dir, spawnOffset.y);
             seal.Spawn(pos, dir);
         }
+        StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.SealClip));
         yield return null;
 
     }
@@ -72,6 +73,7 @@ public class W_SealPool : Weapon
             int dir = GetMouseDir();
             Vector2 pos = (Vector2)player.transform.position + new Vector2(punchOffset.x * dir, punchOffset.y);
             seal.Launch(dir,pos);
+            StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.SealPunchClip));
         }
         base.Update();
     }
@@ -85,5 +87,11 @@ public class W_SealPool : Weapon
     public override void SetActive()
     {
         bActiveOn = true;
+    }
+
+    public override void OnChangeEffectValue()
+    {
+        sr = sealPrefab.GetComponent<SpriteRenderer>();
+        ChangeAlpha(sr);
     }
 }

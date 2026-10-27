@@ -684,7 +684,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 360714975673368936, guid: a579bc22b90cbbc4fa42fc38c1b0ccb9, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 409bdf1ebbfc3ee4a9bb82662115419d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3017b1ef96419f44ab0b3ff6c5c5c0fa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -804,6 +804,12 @@ MonoBehaviour:
   closeClip: {fileID: 8300000, guid: b2ce2e98b21bf1643ac316ead8e11a0c, type: 3}
   buttonClip: {fileID: 8300000, guid: 07c8f1e97e6e61f4a84545f0637882b0, type: 3}
   applyClip: {fileID: 8300000, guid: 8902650a250805049b29a700de643fd7, type: 3}
+  noramlBGMClip: {fileID: 8300000, guid: 4e02b0799193adc45a248564a05cc80f, type: 3}
+  bossBGMClip: {fileID: 8300000, guid: 809731efbbac5e540a2482becd4b9d09, type: 3}
+  pipeClip: {fileID: 0}
+  SealClip: {fileID: 0}
+  SealPunchClip: {fileID: 0}
+  bgmSource: {fileID: 655448145}
 --- !u!1 &736645872
 GameObject:
   m_ObjectHideFlags: 0

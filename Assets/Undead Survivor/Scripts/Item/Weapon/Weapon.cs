@@ -73,4 +73,15 @@ public class Weapon : MonoBehaviour
     {
         return;
     }
+
+    public virtual void OnChangeEffectValue()
+    {
+        return;
+    }
+    protected void ChangeAlpha(SpriteRenderer sr)
+    {
+        Color c = sr.color;
+        c.a = GameData.EffectRatio;
+        sr.color = c;
+    }
 }

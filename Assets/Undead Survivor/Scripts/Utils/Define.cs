@@ -13,7 +13,7 @@ public static class Define
     public static float Bullet_Speed = 15f;
     public static float AttractSpeed = 4f;
     public static string strRushEnemy = "RushEnemy";
-    public static int poolFactor = 1;
+    public static int poolFactor = 2;
     public static int displayWindowFull_Index = 4;
     public static int displayFull_Index = 5;
     public static string strEffectRatio = "EffectRatio";
@@ -29,6 +29,7 @@ public static class Define
     public enum PoolType
     {
         Coin = 0,
+        Damage,
         MonsterBoss,
         MonsterOne,
         MonsterTwo,

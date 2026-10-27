@@ -75,11 +75,13 @@ public class SwarmEnemy : Enemy
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
+            sr.color = Color.white;
             Despawn();
             //GameManager.instance.kill++;
             //GameManager.instance.GetExp(coindata);
         }
-        StartCoroutine(ChangeColor());
+        else
+            StartCoroutine(ChangeColor());
     }
 
     private IEnumerator ChangeColor()

@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
             int index = basicLevelStart;
             for (int i = basicLevelStart; i < monsterData.Length; i++)
             {
-                if (monsterData[i].weight < rand)
+                if (monsterData[i].weight > rand)
                 {
                     index = i;
                     break;
@@ -65,6 +65,7 @@ public class Spawner : MonoBehaviour
     void SpawnBoss()
     {
         Spawn(levelBoss);
+        SoundManager.instance.ChangeClip(true);
         bossSlider.gameObject.SetActive(true);
         bossSlider.value = 1f;
     }
