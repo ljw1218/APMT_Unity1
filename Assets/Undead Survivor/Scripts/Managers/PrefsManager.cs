@@ -21,7 +21,6 @@ public static class PrefsManager
         if (!IsAvailable())
             return false;
 
-        Debug.Log(GameData.DisplayIndex);
         if (GameData.DisplayIndex == Define.displayWindowFull_Index)
             Screen.SetResolution(GameData.monitorW, GameData.monitorH, FullScreenMode.FullScreenWindow);
         else if (GameData.DisplayIndex == Define.displayFull_Index)

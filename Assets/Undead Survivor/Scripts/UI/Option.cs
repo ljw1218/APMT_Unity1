@@ -73,6 +73,11 @@ public class Option : MonoBehaviour
         StartCoroutine(SoundManager.instance.PlaySound(SoundManager.instance.buttonClip));
         graphicPanel.gameObject.SetActive(true);
         soundPanel.gameObject.SetActive(false);
+        for(int i=0; i<displayButtons.Length; i++)
+        {
+            if(i == PlayerPrefs.GetInt("DisplayIndex", GameData.DisplayIndex))
+                displayButtons[i].GetComponent<Image>().color = selected_Color;
+        }
         optionGraphicButton.GetComponent<Image>().color = selected_Color;
         optionSoundButton.GetComponent<Image>().color = Free_Color;
         SetSliderPosition();
@@ -111,9 +116,14 @@ public class Option : MonoBehaviour
         GameData.showPD = playerDamageToggle.isOn;
         PlayerPrefs.SetInt(Define.strPD, playerDamageToggle.isOn ? 1 : 0);
         PlayerPrefs.Save();
+        bool bChanged = false;
         if (prevIndex != GameData.DisplayIndex)
-            PrefsManager.SetDisplay();
-
+            bChanged = PrefsManager.SetDisplay();
+        if (!bChanged)
+        {
+            GameData.DisplayIndex = prevIndex;
+            OnClick_DisplayButton(prevIndex);
+        }
         if (GameData.isGameScene)
             WeaponManager.instance.ChangeAlpha();
     }

@@ -46,6 +46,7 @@ public class W_SealPool : Weapon
             seal = Instantiate(sealPrefab);   // 플레이어 자식으로 두지 않기
             seal.UpdateDamage(Damage);
             seal.transform.SetParent(transform, false);
+            OnChangeEffectValue();
         }
 
         if (!seal.IsActive)
@@ -91,7 +92,7 @@ public class W_SealPool : Weapon
 
     public override void OnChangeEffectValue()
     {
-        sr = sealPrefab.GetComponent<SpriteRenderer>();
+        sr = seal.gameObject.GetComponent<SpriteRenderer>();
         ChangeAlpha(sr);
     }
 }
