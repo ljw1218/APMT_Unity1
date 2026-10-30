@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     public void OnEndClicked()
     {
         //if 승리 이면 데이터 저장 로직 추가 필요
+        Time.timeScale = 1f;
         SceneManager.LoadScene(Define.Scene.Main);
     }
 

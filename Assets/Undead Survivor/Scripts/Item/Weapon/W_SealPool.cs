@@ -92,6 +92,8 @@ public class W_SealPool : Weapon
 
     public override void OnChangeEffectValue()
     {
+        if (seal == null)
+            return;
         sr = seal.gameObject.GetComponent<SpriteRenderer>();
         ChangeAlpha(sr);
     }
